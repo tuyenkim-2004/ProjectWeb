@@ -1,0 +1,143 @@
+
+.title_prd{
+    text-align: center;
+    background-image: url(/projectWeb/images/img_panner/background_3.webp);
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+.title_prd h2{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.navbar-nav{
+    font-size: 18px;
+    gap: 500px; 
+}
+
+.navbar-nav a{
+    background-color: rgb(238, 168, 168);
+    border: 2px solid rgb(238, 168, 168);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.navbar-nav a:hover{
+    background-color: antiquewhite;
+}
+
+.tbl{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.create{
+    padding-top: 0px;
+    text-align: right;
+    padding-right: 20px;                               
+} 
+
+.create button{
+    height: 50px;
+    font-weight: bold;
+    background-color: rgb(236, 188, 125);
+    border: 2px solid rgb(236, 188, 125);
+    border-radius: 5px;
+}
+
+.create button:hover{
+    background-color: antiquewhite;
+}
+
+.table thead th{
+    background-color: rgb(225, 140, 30); /* Màu nền cho phần tiêu đề bảng */
+}
+
+.form-box h2{
+    text-align: center;
+}
+
+.modal-content h2{
+    text-align: center;
+    padding: 20px;
+    background-image: url(/projectWeb/images/img_panner/background_1.webp); /* Đường dẫn tương đối */
+}
+
+.input-group-text{
+    width: 30%;
+}
+
+.showfeature{
+    height: 50px;
+    font-weight: bold;
+    background-color: rgb(236, 188, 125);
+    border: 2px solid rgb(236, 188, 125);
+    border-radius: 5px;
+}
+
+.showfeature:hover{
+    background-color: antiquewhite;
+}
+
+.show{
+    text-align: left;
+    padding-left: 20px;
+}
+
+.feature{
+    display: none; /* Ẩn nút Delete nếu không cần */
+}
+
+.product_body td{
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.dele{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(236, 188, 125);
+    border: 2px solid rgb(236, 188, 125);
+}
+
+.dele:hover{
+    background-color: antiquewhite;
+}
+.control{
+    display: flex;
+    justify-content: space-between;
+}
+table {
+    width: 100%;
+}
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 14px;
+    }
+    .navbar-nav .nav-link{
+
+        text-align: center;
+    }
+
+    th:nth-child(4), td:nth-child(4), 
+    th:nth-child(5), td:nth-child(5), 
+    th:nth-child(6), td:nth-child(6) { 
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    table th, table td {
+        font-size: 12px;
+    }
+    .navbar-nav .nav-link{
+
+        text-align: center;
+    }
+    th:nth-child(8), td:nth-child(8) {
+        display: none;
+    }
+}
