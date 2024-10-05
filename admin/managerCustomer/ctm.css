@@ -1,0 +1,70 @@
+
+.title_prd{
+    text-align: center;
+    background-image: url(/projectWeb/images/img_panner/background_3.webp);
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+.title_prd h2{
+    font-weight: bold;
+    font-size: 50px
+}
+.navbar-nav{
+    font-size: 18px;
+    gap: 500px;
+}
+.navbar-nav a{
+    background-color: rgb(238, 168, 168) ;
+    border: 2px solid rgb(238, 168, 168);
+    border-radius: 5px;
+    font-weight: bold;
+}
+.navbar-nav a:hover{
+    background-color: antiquewhite;
+}
+.tbl{
+    padding-top: 30px;
+    text-align: center;
+}
+.table thead th{
+    background-color: rgb(225, 140, 30); /* Màu nền cho phần tiêu đề bảng */
+}
+.tbl{
+    padding-top: 30px;
+    text-align: center;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 14px;
+    }
+    .navbar-nav .nav-link{
+
+        text-align: center;
+    }
+    /* Ẩn các cột không cần thiết trên màn hình nhỏ */
+    th:nth-child(4), td:nth-child(4), /* Ẩn cột Sản Phẩm */
+    th:nth-child(5), td:nth-child(5), /* Ẩn cột Tổng Sản Phẩm */
+    th:nth-child(7), td:nth-child(7) { /* Ẩn cột Tổng Giá */
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    table th, table td {
+        font-size: 12px;
+    }
+    .navbar-nav .nav-link{
+
+        text-align: center;
+    }
+    th:nth-child(8), td:nth-child(8) {
+        display: none;
+    }
+}
