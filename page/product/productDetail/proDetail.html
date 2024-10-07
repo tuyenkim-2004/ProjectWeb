@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/projectWeb/page/home/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./proDetail.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/projectWeb/images/img_panner/logo.webp" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item2 dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sản phẩm
+                        </a>
+                        <ul class="sub_menu dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <!-- First dropdown -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                    aria-expanded="false">
+                                    Kem dưỡng da
+                                </a>
+                                <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="#">V7 Toning Light</a></li>
+                                    <li><a class="dropdown-item" href="#">Bioaqua</a></li>
+                                    <li><a class="dropdown-item" href="#">Collagen</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Sữa rửa mặt</a>
+                                <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="#">Senka</a></li>
+                                    <li><a class="dropdown-item" href="#">Hazeline</a></li>
+                                    <li><a class="dropdown-item" href="#">Rice Milk</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Dầu gội</a>
+                                <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="#">Clear</a></li>
+                                    <li><a class="dropdown-item" href="#">Rejoie</a></li>
+                                    <li><a class="dropdown-item" href="#">Dercos</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Sữa tắm</a>
+                                <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="#">Dove</a></li>
+                                    <li><a class="dropdown-item" href="#">Pharmacity</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Liên hệ
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Giỏ hàng</a>
+                    </li>
+                </ul>
+                <form class="d-flex search-form">
+                    <i class="bi2 bi-search search-icon"></i>
+                    <input class="form-control me-2 search-input" type="search" placeholder="Search"
+                        aria-label="Search">
+
+                    <div class="sub_search">
+                        <div class="user-icon">
+                            <a href="#">
+                                <i class="bi3 bi-person-fill"></i>
+                            </a>
+                            <div class="user_menu dropdown-menu">
+                                <a href="#" class="dropdown-item">Đăng Nhập</a>
+                                <a href="#" class="dropdown-item">Đăng Ký</a>
+                            </div>
+                        </div>
+
+                        <a href="#"><i class="bi bi-handbag-fill"></i></a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container_details container">
+        <div class="row">
+            <!-- Cột hình ảnh -->
+            <div class="col-lg-6 product-images">
+                <img src="/projectWeb/images/img_faceWash/img_1.webp" alt="Sữa rửa mặt Senka">
+            </div>
+            <!-- Cột chi tiết sản phẩm -->
+            <div class="col-lg-6 details-pro">
+                <h1 class="title-head">Sữa rửa mặt Senka</h1>
+                <div class="special-price">
+                    <span class="price product-price">80.000₫</span>
+                </div>
+                <form id="add-to-cart-form" class="wishItem">
+                    <input type="hidden" id="one_variant" name="variantId" value="68561602" />
+
+                    <div class="service_product">
+                        <div class="info_servicea">
+                            <img class="img-responsive" src="/projectWeb/images/icon/image_service_1_product.png"
+                                alt="">
+                            <p><a href="#" title="Giao hàng toàn quốc">Giao hàng toàn quốc</a></p>
+                        </div>
+                        <div class="info_servicea">
+                            <img class="img-responsive" src="/projectWeb/images/icon/image_service_2_product.png"
+                                alt="">
+                            <p><a href="#" title="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</a></p>
+                        </div>
+                        <div class="info_servicea">
+                            <img class="img-responsive" src="/projectWeb/images/icon/image_service_3_product.png"
+                                alt="">
+                            <p><a href="#" title="Cam kết đổi/trả hàng miễn phí">Cam kết đổi/trả hàng miễn phí</a></p>
+                        </div>
+                        <div class="info_servicea">
+                            <img class="img-responsive" src="/projectWeb/images/icon/image_service_4_product.png"
+                                alt="">
+                            <p><a href="#" title="Hàng chính hãng/Bảo hành 10 năm">Hàng chính hãng/Bảo hành 10 năm</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="inventory_quantity">
+                        <span class="a-stock">Còn hàng</span>
+                    </div>
+                    <div class="flex-quantity" id="button">
+
+                        <div class="qty-ant ">
+                            <button id="btn-reduce " type="button" onclick="reduceQty()">-</button>
+                            <input aria-label="Số lượng" type="number" id="qty-input" name="quantity" min="1" max="999"
+                                value="1" readonly />
+                            <button id="btn-increase" type="button" onclick="increaseQty()">+</button>
+                        </div>
+
+                        <div class="btn-submit">
+                            <button id="sub" type="submit" class="btn btn-md btn-gray btn-cart btn_buy add_to_cart">Thêm
+                                vào giỏ hàng</button>
+                            </div>
+                        <div class="btn-buy">
+                            <button id="buy" type="button" class="btn btn-md btn-gray btn_buy btn-buy-now "
+                                data-id="68561602" data-qty="1">Mua ngay</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="/projectWeb/images/icon/facebook.png" alt="" class="img-icon">
+                    <img src="/projectWeb/images/icon/messengar.png" alt="" class="img-icon">
+                    <img src="/projectWeb/images/icon/insta.png" alt="" class="img-icon">
+                </div>
+                <div class="col-4">
+                    <img src="/projectWeb/images/icon/gmail.png" alt="" class="img-icon">
+                    <p>Nhập bản tin làm dẹp cùng chúng tôi </p>
+                </div>
+                <div class="col-4">
+                    <input type="text" placeholder="Nhập email của bạn" id="input-footer">
+                    <button class="btn-re">Đăng ký </button>
+                </div>
+            </div>
+        </div>     
+    </div>
+    </div>
+    <div class="container" class="footer">
+        <div class="row">
+            <div class="col-3">
+                <img src="/projectWeb/images/img_panner/logo.webp" alt="">
+                <div class="img">
+                    <img src="/projectWeb/images/icon/location.png" alt="" id="img-icon">
+                    <p>Lê Hữu Trác - Sơn Trà - Đà Nẵng </p>
+                </div>
+                <div class="img">
+                    <img src="/projectWeb/images/icon/email.png" alt="" id="img-icon">
+                    <p>tuyenkimnguyen107@gmail.com</p>
+                </div>
+                <div class="img">
+                    <img src="/projectWeb/images/icon/call.png" alt="" id="img-icon">
+                    <p>0348626</p>
+                </div>                
+                <div class="img">
+                    <img src="/projectWeb/images/icon/restaurant.png" alt="" id="img-icon">
+                    <p>Hệ thống nhà hàng </p>
+                </div>     
+            </div>
+            <div class="col-3">
+                <h4>HỖ TRỢ KHÁCH HÀNG </h4>
+                <p>Trang chủ</p>
+                <p>Sản phẩm</p>
+                <p>Liên hệ</p>
+               
+            </div>
+            <div class="col-3">
+                <h4>CHÍNH SÁCH </h4>
+                <p>Tin tức</p>
+                <p>Giỏ hàng</p>
+                <p>Tìm kiếm</p>
+            </div>
+            <div class="col-3">
+                <h4>GIỜ MỞ CỬA </h4>
+                <p>Từ 9:00 - 21:30 tất cả các ngày trong tuần (bao gồm cả các ngày lễ, ngày Tết).</p>
+                <h5>Góp ý, Khiếu nại</h5>
+                <div class="img">
+                    <img src="/projectWeb/images/icon/call.png" alt="" id="img-icon">
+                    <p>0348626</p>
+                </div>                    
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/projectWeb/services/proDetail.js"></script>
+</body>
+
