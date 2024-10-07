@@ -1,60 +1,71 @@
-const table = document.getElementById('table');
+const tbody = document.getElementById('tbody');
 
-
-    /* 
-                    <td class="productInfor">
-                    <div class="container">
-                        <div class="container col-1">
-                            <input type="checkbox" class="checkbox">
-                        </div> 
-                            <img src="/projectWeb//images/img_faceWash/img_1.webp" alt="" id="img-produc">
-                        <div class="container">
-                            <div>
-                                <p class="productName">name</p>
-                                <p class="productdelete">xoa</p>
-                            </div>
-                        </div>        
-                    </div>
-                </td>
-                <td class="productPrice">1000</td>
-                <td class="productQuan">30</td>
-                <td class="productTotalPrice">30000</td>
-    */
-
-function addProduct () {
+function addProduct() {
     let row = document.createElement('tr')
-    table.appendChild(row)
-    let productInfor = document.getElementById('td')
-    let productPrice = document.getElementById('td')
-    let productQuan = document.getElementById('td')
-    let productTotalPrice = document.getElementById('td')
+
+    let productInfor = document.createElement('td')
+    let productPrice = document.createElement('td')
+    let productQuan = document.createElement('td')
+    let productTotalPrice = document.createElement('td')
+
+    let containerBig = document.createElement('div')
+    let containerSmall = document.createElement('div')
+    let divCheck = document.createElement('div')
+    let divSmall = document.createElement('div')
 
     let checkbox = document.createElement('input')
     let productImg = document.createElement('img')
     let productName = document.createElement('p')
-    let productdelete = document.createElement('p')
+    let productDelete = document.createElement('p')
 
-    productInfor.className = 'productInfor'
-    productPrice.className = 'productPrice'
-    productQuan.className = 'productQuan'
-    productTotalPrice.className = 'productTotalPrice'
-
-    checkbox.className = 'checkbox'
-    productImg.className = 'img-product'
-    productName.className = 'productName'
-    productdelete.className = 'productdelete'
+    tbody.appendChild(row)
 
     row.appendChild(productInfor)
     row.appendChild(productPrice)
     row.appendChild(productQuan)
     row.appendChild(productTotalPrice)
 
-    productInfor.appendChild(checkbox)
-    productInfor.appendChild(productImg)
-    productInfor.appendChild(productName)
-    productInfor.appendChild(productdelete)
+    productInfor.appendChild(containerBig)
+
+    containerBig.appendChild(divCheck)
+    containerBig.appendChild(productImg)
+    containerBig.appendChild(containerSmall)
+
+    divCheck.appendChild(checkbox)
+
+    containerSmall.appendChild(divSmall)
+
+    divSmall.appendChild(productName)
+    divSmall.appendChild(productDelete)
+
+    productInfor.className = 'productInfor'
+    productPrice.className = 'productPrice'
+    productQuan.className = 'productQuan'
+    productTotalPrice.className = 'productTotalPrice'
+
+    containerBig.className = 'container'
+    divCheck.className = 'container col-1'
+    containerSmall.className = 'container'
+
+    checkbox.className = 'checkbox'
+    checkbox.type = 'checkbox';
+    productImg.className = 'img-product'
+    productName.className = 'productName'
+    productDelete.className = 'productDelete'
+
+    productName.innerHTML = '???'
+    productDelete.innerHTML = 'xóa'
+
+    productImg.alt = 'none'
+
+    productPrice.innerHTML = 100
+    productQuan.innerHTML = 100
+    productTotalPrice.innerHTML = 100
 }
 
 
+console.log(addProduct())
+console.log(addProduct())
+console.log(addProduct())
 
 

@@ -33,8 +33,17 @@ table {
 
 td img {
     height: 150px;
+    border: 1px solid #000;
 }
 
 td {
     align-content: center;
+}
+
+p {
+    font-size: 150%;
+}
+
+.productDelete:hover {
+    color: #a05139;
 }
