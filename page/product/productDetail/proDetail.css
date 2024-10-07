@@ -1,0 +1,118 @@
+.container_details {
+    margin-top: 30px; 
+}
+.product-images img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.special-price{
+    font-size: 30px;
+}
+.service_product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   border-bottom: 1px solid  rgba(0, 0, 0, 0.1);
+   height: 150px;
+}
+.inventory_quantity{
+    color:hsl(14, 57%, 41%) ;
+    margin: 20px;
+}
+.info_servicea {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info_servicea img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+.info_servicea p{
+    margin: 0;
+    display: inline-block;
+    line-height: 1;
+}
+.btn-custom {
+    display: flex;
+    align-items: center;
+    margin-top: 20px
+}
+.btn-custom input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+} 
+.flex-quantity {
+    display: flex;
+    align-items: center; 
+    gap: 40px   
+    
+}
+.custom-btn-number {
+    display: flex; 
+    align-items: center;
+   
+}
+.qty-ant{
+    display: flex;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    height: 40px;
+} 
+
+.qty-ant button{
+    border: none ;
+    background: none;
+} 
+
+.qty-ant button:hover {
+    background-color:#ffb9a4 ;
+}
+
+
+#qty-input {
+    border: none;
+    text-align:center ;
+}
+
+.btn-mua{
+    display: flex;
+    gap:5px;
+    margin-right: 150px;
+}
+.btn-buy-now{
+    background-color: #ffb9a4;
+    border: none;
+}
+
+#sub {
+    border: 1px solid black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#sub:hover {
+    background-color: #ff8a70; 
+    border: none;
+}
+#buy {
+    background-color: #ffb9a4; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#buy:hover {
+    background: lightgray;
+}
+
+a{
+    text-decoration: none;
+    color: black
+}
+h1{
+    font-size: 40px;
+}
