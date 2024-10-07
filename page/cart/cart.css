@@ -1,0 +1,40 @@
+table {
+    border: 1px solid #000;
+}
+
+#navbar-cart {
+    background-color:  #ffece1;
+    position: relative; 
+    display: flex;
+    gap: 15px;
+    left:10px ;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+ 
+#navbar-cart a {
+    text-decoration: none;
+}
+
+#navbar-toHome {
+    color: #000;
+}
+
+#navbar-toHome:hover {
+    color: #a05139;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+
+}
+
+td img {
+    height: 150px;
+}
+
+td {
+    align-content: center;
+}
