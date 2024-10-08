@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/projectWeb/page/home/home.css">
+    <link rel="stylesheet" href="/page/home/home.css">
+    <link rel="stylesheet" href="home.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
@@ -124,7 +125,7 @@
         <div class="row">
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_1.webp" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/images/img_faceWash/img_1.webp" alt="Card image" style="width:100%">
                     <div class="card-body text-center">
                         <h4 class="card-title">Sữa tắm ST.Ives</h4>
                         <p class="card-text"> 110.000₫</p>
@@ -135,7 +136,7 @@
             </div>
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_2.webp" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/images/img_faceWash/img_2.webp" alt="Card image" style="width:100%">
                     <div class="card-body text-center">
                         <h4 class="card-title">Sữa rửa mặt Senka</h4>
                         <p class="card-text"> 80.000₫</p>
@@ -146,7 +147,7 @@
             </div>
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_3.webp" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/images/img_faceWash/img_3.webp" alt="Card image" style="width:100%">
                     <div class="card-body text-center">
                         <h4 class="card-title">Sữa rửa mặt Hatomuzi</h4>
                         <p class="card-text"> 95.000₫</p>
@@ -157,7 +158,7 @@
             </div>
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_4.webp" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/images/img_faceWash/img_4.webp" alt="Card image" style="width:100%">
                     <div class="card-body text-center">
                         <h4 class="card-title">Sữa rửa mặt Rice milk</h4>
                         <p class="card-text"> 75.000₫</p>
@@ -175,7 +176,7 @@
         <div class="row">
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" src="/projectWeb/images/img_shampoo/shampoo_1.webp" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/images/img_shampoo/shampoo_1.webp" alt="Card image" style="width:100%">
                     <div class="card-body text-center">
                         <h4 class="card-title">Dầu gội Clear</h4>
                         <p class="card-text"> 200.000₫ </p>
@@ -186,7 +187,7 @@
             </div>
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" src="/projectWeb/images/img_shampoo/shapoo_2.webp" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/images/img_shampoo/shapoo_2.webp" alt="Card image" style="width:100%">
                     <div class="card-body text-center">
                         <h4 class="card-title">Dầu gội NeBlack Tone</h4>
                         <p class="card-text"> 200.000₫</p>
@@ -197,7 +198,7 @@
             </div>
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" src="/projectWeb/images/img_shampoo/shampoo_3.webp" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/images/img_shampoo/shampoo_3.webp" alt="Card image" style="width:100%">
                     <div class="card-body text-center">
                         <h4 class="card-title">Dầu gội Rejoie</h4>
                         <p class="card-text"> 150.000đ </p>
@@ -208,7 +209,7 @@
             </div>
             <div class="col-3">
                 <div class="card">
-                    <img class="card-img-top" src="/projectWeb/images/img_shampoo/shampoo_4.webp" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="/images/img_shampoo/shampoo_4.webp" alt="Card image" style="width:100%">
                     <div class="card-body text-center">
                         <h4 class="card-title">Dầu gội Dercos</h4>
                         <p class="card-text"> 90.000₫</p>
@@ -224,15 +225,17 @@
             <h2>TẤT CẢ MỸ PHẨM</h2>
         </div>
         <nav id="navbar-tcmp">
-            <a href="#" class="category">Mỹ Phẩm</a>
-            <a href="#" class="category">Dưỡng Da</a>
-            <a href="#" class="category">Công Cụ</a>
+            <a href="#" class="category" data-category-id="1">Sữa rửa mặt </a>
+            <a href="#" class="category" data-category-id="2">Dầu gội </a>
+            <a href="#" class="category" data-category-id="3">Kem dưỡng da</a>
+            <a href="#" class="category" data-category-id="4">Sữa tắm </a>
+
         </nav>
         <div class="mypham">
             <div class="row">
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_1.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_1.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Sữa tắm ST.Ives</h4>
                             <p class="card-text"> 110.000₫</p>
@@ -243,7 +246,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_2.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_2.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Sữa rửa mặt Senka</h4>
                             <p class="card-text"> 80.000₫</p>
@@ -254,7 +257,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_3.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_3.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Sữa rửa mặt Hatomuzi</h4>
                             <p class="card-text"> 95.000₫</p>
@@ -265,7 +268,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_4.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_4.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Sữa rửa mặt Rice milk</h4>
                             <p class="card-text"> 75.000₫</p>
@@ -276,7 +279,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_shampoo/shapoo_2.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_shampoo/shapoo_2.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Dầu gội NeBlack Tone</h4>
                             <p class="card-text"> 200.000₫</p>
@@ -287,7 +290,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_shampoo/shampoo_3.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_shampoo/shampoo_3.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Dầu gội Rejoie</h4>
                             <p class="card-text"> 150.000đ </p>
@@ -298,7 +301,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_1.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_1.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Dầu gội Dercos</h4>
                             <p class="card-text"> 90.000₫</p>
@@ -309,7 +312,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_shampoo/shampoo_4.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_shampoo/shampoo_4.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Dầu gội Dercos</h4>
                             <p class="card-text"> 90.000₫</p>
@@ -320,7 +323,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_2.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_2.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Sữa rửa mặt Hazeline </h4>
                             <p class="card-text"> 55.000₫</p>
@@ -331,7 +334,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_3.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_3.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Sữa rửa mặt Hatomuzi </h4>
                             <p class="card-text"> 95.000₫</p>
@@ -342,7 +345,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_4.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_4.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Sữa rửa mặt Rice milk </h4>
                             <p class="card-text"> 75.000₫ </p>
@@ -353,7 +356,7 @@
                 </div>
                 <div class="col-3">
                     <div class="card">
-                        <img class="card-img-top" src="/projectWeb/images/img_faceWash/img_5.webp" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="/images/img_faceWash/img_5.webp" alt="Card image" style="width:100%">
                         <div class="card-body text-center">
                             <h4 class="card-title">Dầu gội Dercos</h4>
                             <p class="card-text"> 90.000₫</p>
@@ -435,6 +438,7 @@
             </div>
         </div>
     </div>
+    <script src="/projectWeb/services/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
