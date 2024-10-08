@@ -64,8 +64,8 @@ function addProduct() {
 }
 
 
-console.log(addProduct())
-console.log(addProduct())
-console.log(addProduct())
+// console.log(addProduct())
+// console.log(addProduct())
+// console.log(addProduct())
 
 

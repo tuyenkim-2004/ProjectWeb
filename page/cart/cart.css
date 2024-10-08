@@ -47,3 +47,19 @@ p {
 .productDelete:hover {
     color: #a05139;
 }
+#buy {
+    display: flex;
+justify-content: end;
+}
+
+#bt-buy {
+    padding: 15px;
+    font-size: 18px;
+    color: #a05139;
+}
+
+#bt-buy:hover {
+    color: white;
+    background: #a05139;
+    
+}
