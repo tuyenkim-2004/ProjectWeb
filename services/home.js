@@ -65,6 +65,10 @@ function fetchAndDisplayProducts(url, selector) {
 
 // Fetch và hiển thị sản phẩm mới về
 fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1');
+console.log (
+fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1')
+
+)
 
 // Fetch và hiển thị sản phẩm bán chạy
 fetchAndDisplayProducts('http://localhost:3000/best_sellers', '.product_2');
@@ -98,7 +102,7 @@ function displayProducts(products) {
 
     if (products.length === 0) {
         productList.innerHTML = '<p>Không có sản phẩm nào trong danh mục này.</p>';
-        return;
+        return; 
     }
 
     products.forEach(product => {
