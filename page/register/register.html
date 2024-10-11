@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1>Đăng Ký</h1>
-        <form action="/register" method="POST">
+        <form id="formRegister">
             <label for="name">Tên:</label>
             <input type="text" id="name" name="name" required>
 
@@ -30,8 +30,9 @@
                 <input type="password" id="confirm-password" name="confirm-password" required>
                 <i class="eye-icon fas fa-eye" onclick="togglePassword('confirm-password')"></i>
             </div>
+            <input type="submit" value="Đăng Nhập">
 
-            <input type="submit" value="Đăng Ký">
+           
         </form>
         <div class="footer">
             <p>Đã có tài khoản? <a href="/projectWeb/page/login/login.html">Đăng Nhập</a></p>
@@ -45,6 +46,7 @@
             passwordField.setAttribute('type', type);
         }
     </script>
+    <script src="/projectWeb/services/register.js"></script>
 </body>
 
 </html>
