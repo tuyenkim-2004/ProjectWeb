@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                        <a class="nav-link active" aria-current="page" href="/projectWeb/page/home/home.html">Trang chủ</a>
                     </li>
                     <li class="nav-item2 dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown1" role="button"
@@ -103,69 +103,7 @@
     </nav>
 
     <div class="container_details container">
-        <div class="row">
-            <!-- Cột hình ảnh -->
-            <div class="col-lg-6 product-images">
-                <img src="/projectWeb/images/img_faceWash/img_1.webp" alt="Sữa rửa mặt Senka">
-            </div>
-            <!-- Cột chi tiết sản phẩm -->
-            <div class="col-lg-6 details-pro">
-                <h1 class="title-head">Sữa rửa mặt Senka</h1>
-                <div class="special-price">
-                    <span class="price product-price">80.000₫</span>
-                </div>
-                <form id="add-to-cart-form" class="wishItem">
-                    <input type="hidden" id="one_variant" name="variantId" value="68561602" />
-
-                    <div class="service_product">
-                        <div class="info_servicea">
-                            <img class="img-responsive" src="/projectWeb/images/icon/image_service_1_product.png"
-                                alt="">
-                            <p><a href="#" title="Giao hàng toàn quốc">Giao hàng toàn quốc</a></p>
-                        </div>
-                        <div class="info_servicea">
-                            <img class="img-responsive" src="/projectWeb/images/icon/image_service_2_product.png"
-                                alt="">
-                            <p><a href="#" title="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</a></p>
-                        </div>
-                        <div class="info_servicea">
-                            <img class="img-responsive" src="/projectWeb/images/icon/image_service_3_product.png"
-                                alt="">
-                            <p><a href="#" title="Cam kết đổi/trả hàng miễn phí">Cam kết đổi/trả hàng miễn phí</a></p>
-                        </div>
-                        <div class="info_servicea">
-                            <img class="img-responsive" src="/projectWeb/images/icon/image_service_4_product.png"
-                                alt="">
-                            <p><a href="#" title="Hàng chính hãng/Bảo hành 10 năm">Hàng chính hãng/Bảo hành 10 năm</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="inventory_quantity">
-                        <span class="a-stock">Còn hàng</span>
-                    </div>
-                    <div class="flex-quantity" id="button">
-
-                        <div class="qty-ant ">
-                            <button id="btn-reduce " type="button" onclick="reduceQty()">-</button>
-                            <input aria-label="Số lượng" type="number" id="qty-input" name="quantity" min="1" max="999"
-                                value="1" readonly />
-                            <button id="btn-increase" type="button" onclick="increaseQty()">+</button>
-                        </div>
-
-                        <div class="btn-submit">
-                            <button id="sub" type="submit" class="btn btn-md btn-gray btn-cart btn_buy add_to_cart">Thêm
-                                vào giỏ hàng</button>
-                            </div>
-                        <div class="btn-buy">
-                            <button id="buy" type="button" class="btn btn-md btn-gray btn_buy btn-buy-now "
-                                data-id="68561602" data-qty="1">Mua ngay</button>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-        </div>
+        // detail
     </div>
     <div class="footer">
         <div class="container">
@@ -235,5 +173,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="/projectWeb/services/proDetail.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        showDetail(productId);
+        
+    </script>
 </body>
 
