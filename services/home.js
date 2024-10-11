@@ -44,7 +44,10 @@ function fetchAndDisplayProducts(url, selector) {
                 demo.classList.add('col-3');
                 demo.innerHTML = `
                     <div class="card">
-                        <img class="card-img-top" src="${product.image}" alt="Card image" style="width:100%">
+
+                        <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
+                            <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
+                        </a>
                         <div class="card-body text-center">
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
@@ -65,6 +68,10 @@ function fetchAndDisplayProducts(url, selector) {
 
 // Fetch và hiển thị sản phẩm mới về
 fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1');
+console.log (
+fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1')
+
+)
 
 // Fetch và hiển thị sản phẩm bán chạy
 fetchAndDisplayProducts('http://localhost:3000/best_sellers', '.product_2');
@@ -94,11 +101,11 @@ document.querySelectorAll('.category').forEach(function(category) {
 
 function displayProducts(products) {
     const productList = document.getElementById('product-list');
-    productList.innerHTML = ''; // Xóa danh sách cũ
+    productList.innerHTML = ''; 
 
     if (products.length === 0) {
         productList.innerHTML = '<p>Không có sản phẩm nào trong danh mục này.</p>';
-        return;
+        return; 
     }
 
     products.forEach(product => {
@@ -106,16 +113,18 @@ function displayProducts(products) {
             demo.classList.add('col-3');
             demo.innerHTML = `
                 <div class="card">
-                    <img class="card-img-top" src="${product.image}" alt="Card image" style="width:100%">
-                    <div class="card-body text-center">
-                        <h4 class="card-title" class="">${product.name}</h4>
-                        <p class="card-text">${product.price} VNĐ</p>
-                        <a href="#" class="btn btn-primary btn-order">Mua</a>
-                        <a href="#" class="btn btn-primary btn-shopping">
-                            <i class="bi bi-handbag-fill icon-shopping"></i>
+                        <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
+                            <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
                         </a>
+                        <div class="card-body text-center">
+                            <h4 class="card-title">${product.name}</h4>
+                            <p class="card-text">${product.price} VNĐ</p>
+                            <a href="#" class="btn btn-primary btn-order">Mua</a>
+                            <a href="#" class="btn btn-primary btn-shopping">
+                                <i class="bi bi-handbag-fill icon-shopping"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
             `;
 
             // Thêm phần tử demo vào productList
