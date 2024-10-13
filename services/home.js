@@ -131,3 +131,26 @@ function displayProducts(products) {
             productList.appendChild(demo);
     });
 }
+
+
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        // Thay đổi thông tin trong data
+        data.newProperty = 'New Value';
+
+        // Gửi dữ liệu đã thay đổi trở lại máy chủ (nếu cần)
+        return fetch('update-endpoint', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Dữ liệu đã được cập nhật!');
+        }
+    })
+    .catch(error => console.error('Có lỗi xảy ra:', error));q   
