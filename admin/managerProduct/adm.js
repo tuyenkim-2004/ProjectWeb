@@ -1,29 +1,17 @@
+const apiUrl = 'http://localhost:3000/products';
 var arr = [];
 
-function saveToLocalStorage() {
-    localStorage.setItem('products', JSON.stringify(arr));
-}
-
-
-function loadFromLocalStorage() {
-    var storedProducts = localStorage.getItem('products');
-    if (storedProducts) {
-        arr = JSON.parse(storedProducts);
-    }
-}
-
-
-function save() {
+// Hàm lưu sản phẩm vào API
+async function save() {
     var name = document.getElementById('prn').value;
-    var price = document.getElementById('pre').value;
-    var total = document.getElementById('tlq').value;
+    var price = parseFloat(document.getElementById('pre').value);
+    var total = parseInt(document.getElementById('tlq').value);
     var describe = document.getElementById('mt').value;
     var imageFile = document.getElementById('img').files[0];
-    var imageUrl = imageFile ? URL.createObjectURL(imageFile) : ''; 
-    parseFloat(price);
-    parseInt(total)
-    if (!name || !price || !total || !describe) {
-        alert('Vui lòng điền đầy đủ thông tin!');
+    var imageUrl = imageFile ? URL.createObjectURL(imageFile) : '';
+
+    if (!name || isNaN(price) || isNaN(total) || !describe) {
+        alert('Vui lòng điền đầy đủ thông tin hợp lệ!');
         return; 
     }
 
@@ -32,24 +20,35 @@ function save() {
         price: price,
         total: total,
         image: imageUrl,
-        describes:describe,
+        describes: describe,
     };
 
-    arr.push(product);
+    // Gửi yêu cầu POST để lưu sản phẩm
+    const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(product),
+    });
 
-    
-    saveToLocalStorage();
-
-    document.getElementById('prn').value = '';
-    document.getElementById('pre').value = '';
-    document.getElementById('tlq').value = '';
-    document.getElementById('img').value = '';
-    document.getElementById('mt').value = '';
-
-    var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-    modal.hide();
+    if (response.ok) {
+        loadProducts(); // Tải lại danh sách sản phẩm
+        resetForm(); // Đặt lại form
+    } else {
+        alert('Lỗi khi lưu sản phẩm!');
+    }
 }
 
+// Tải sản phẩm từ API
+async function loadProducts() {
+    const response = await fetch(apiUrl);
+    const products = await response.json();
+    arr = products;
+    show();
+}
+
+// Hiển thị sản phẩm
 function show() {
     var showPrd = '';
     for (let i in arr) {
@@ -59,25 +58,40 @@ function show() {
         showPrd += "<td>" + arr[i].name + "</td>";
         showPrd += "<td>" + arr[i].price + "</td>";
         showPrd += "<td>" + arr[i].total + "</td>";
-        showPrd += "<td><img src='" + arr[i].image + "' width='50' height='50' object-fit:cover ></td>";
+        showPrd += "<td><img src='" + arr[i].image + "' width='50' height='50' style='object-fit:cover;'></td>";
         showPrd += "<td>" + arr[i].describes + "</td>";
-        showPrd += "<td><button class='dele' onclick='dete(" + i + ")'>Xóa</button></td>"; // Nút xóa
+        showPrd += "<td><button class='dele' onclick='dete(" + arr[i].id + ")'>Xóa</button></td>"; // Nút xóa
         showPrd += "</tr>";
     }
     document.getElementById('product-table-body').innerHTML = showPrd;
 }
 
-// Hàm xóa sản phẩm dựa trên chỉ số
-function dete(index) {
+// Hàm xóa sản phẩm dựa trên ID
+async function dete(id) {
     if (confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?')) {
-        arr.splice(index, 1);  // Xóa sản phẩm từ mảng
-        saveToLocalStorage();  // Cập nhật localStorage
-        show();  // Hiển thị lại danh sách sản phẩm
+        const response = await fetch(`${apiUrl}/${id}`, {
+            method: 'DELETE',
+        });
+
+        if (response.ok) {
+            loadProducts(); // Tải lại danh sách sp
+        } else {
+            const errorText = await response.text();
+            alert(`Lỗi khi xóa sản phẩm! Mã lỗi: ${response.status}, Thông báo: ${errorText}`);
+        }
     }
 }
 
-
-window.onload = function() {
-    loadFromLocalStorage();
-    show();
+// Hàm đặt lại form
+function resetForm() {
+    document.getElementById('prn').value = '';
+    document.getElementById('pre').value = '';
+    document.getElementById('tlq').value = '';
+    document.getElementById('img').value = '';
+    document.getElementById('mt').value = '';
+    var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    modal.hide();
 }
+
+// Tải sản phẩm khi trang được tải
+window.onload = loadProducts;
