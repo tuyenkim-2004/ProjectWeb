@@ -14,43 +14,33 @@
       "id": 1,
       "username": "tuyen",
       "password": "tuyen123",
+      "phone": "0348626820",
       "roleId": 1,
       "email": "tuyenkimnguyen107@gmail.com"
     },
     {
-      "id": 2,
-      "username": "customer1",
-      "password": "customer123",
+      "id": 1728914099294,
+      "username": "123",
+      "password": "123",
+      "phone": "123",
       "roleId": 2,
-      "email": "customer1@example.com"
+      "email": "123@gmail.com"
     },
     {
-      "id": 3,
-      "username": "customer2",
-      "password": "customer456",
-      "roleId": 2,
-      "email": "customer2@example.com"
-    },
-    {
-      "id": 4,
-      "username": "nguyen thi kim tuyen",
-      "email": "tuyen@gmail.com",
+      "id": 1728918481966,
+      "username": "nguyendat",
       "password": "12345678",
-      "roleId": 2
+      "phone": "030805000",
+      "roleId": 2,
+      "email": "dat@123.com"
     },
     {
-      "id": 5,
+      "id": 1729067753798,
       "username": "Nguyễn Thị Kim Tuyền",
-      "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
-      "password": "12345678",
-      "roleId": 2
-    },
-    {
-      "id": 6,
-      "username": "Hồ Thị Huế",
-      "email": "hue.ho25@student.passerellesnumeriques.org",
       "password": "123456789",
-      "roleId": 2
+      "phone": "0348626820",
+      "roleId": 2,
+      "email": "tuyen.nguyen25@student.passerellesnumeriques.org"
     }
   ],
   "products": [
@@ -382,6 +372,23 @@
       "orderDate": "2024-10-02",
       "status": "Đã giao"
     }
+  ],
+  "carts": [
+    {
+      "quantity": 1,
+      "id": 1
+    },
+    {
+      "quantity": 1,
+      "id": 2
+    },
+    {
+      "quantity": 1,
+      "id": 3
+    },
+    {
+      "quantity": 1,
+      "id": 4
+    }
   ]
 }
-

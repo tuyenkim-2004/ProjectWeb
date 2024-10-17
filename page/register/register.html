@@ -18,6 +18,10 @@
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <p id="emailError"></p>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
 
             <label for="password">Mật Khẩu:</label>
             <div class="input-container">
@@ -29,16 +33,16 @@
             <div class="input-container">
                 <input type="password" id="confirm-password" name="confirm-password" required>
                 <i class="eye-icon fas fa-eye" onclick="togglePassword('confirm-password')"></i>
+                <p id="errorPassword"></p>
             </div>
             <input type="submit" value="Đăng Nhập">
 
            
         </form>
         <div class="footer">
-            <p>Đã có tài khoản? <a href="/projectWeb/page/login/login.html">Đăng Nhập</a></p>
+            <p>Đã có tài khoản? <a href="/projectWeb/page/login/login.html">Đăng Ký </a></p>
         </div>
     </div>
-
     <script>
         function togglePassword(id) {
             const passwordField = document.getElementById(id);
