@@ -19,9 +19,12 @@
     border: 2px solid rgb(238, 168, 168);
     border-radius: 5px;
     font-weight: bold;
+    transform: translate(100px,0);
 }
 .navbar-nav a:hover{
     background-color: antiquewhite;
+    transition: all 200ms linear;
+    transform: scale(1.2);
 }
 .tbl{
     padding-top: 30px;
@@ -39,19 +42,21 @@ table {
     width: 100%;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     table th, table td {
         font-size: 14px;
+    }
+    .navbar{
+        
     }
     .navbar-nav .nav-link{
 
         text-align: center;
     }
-    /* Ẩn các cột không cần thiết trên màn hình nhỏ */
-    th:nth-child(4), td:nth-child(4), /* Ẩn cột Sản Phẩm */
-    th:nth-child(5), td:nth-child(5), /* Ẩn cột Tổng Sản Phẩm */
-    th:nth-child(7), td:nth-child(7) { /* Ẩn cột Tổng Giá */
+    th:nth-child(4), td:nth-child(4), 
+    th:nth-child(5), td:nth-child(5),
+    th:nth-child(7), td:nth-child(7) { 
         display: none;
     }
 }
@@ -61,8 +66,8 @@ table {
         font-size: 12px;
     }
     .navbar-nav .nav-link{
-
         text-align: center;
+        font-size: 10px;
     }
     th:nth-child(8), td:nth-child(8) {
         display: none;

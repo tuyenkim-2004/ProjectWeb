@@ -141,3 +141,6 @@ table {
         display: none;
     }
 }
+#dashboard {
+    margin-bottom: 20px;
+}

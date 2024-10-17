@@ -1,31 +1,31 @@
 {
   "roles": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Customer"
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "tuyen",
       "password": "tuyen123",
       "roleId": 1,
       "email": "tuyenkimnguyen107@gmail.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "customer1",
       "password": "customer123",
       "roleId": 2,
       "email": "customer1@example.com"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "customer2",
       "password": "customer456",
       "roleId": 2,
@@ -34,68 +34,43 @@
   ],
   "products": [
     {
-      "id": 1,
-      "name": "Sữa rửa mặt Senka",
-      "price": 80000,
-      "categoryId": 1,
-      "image": "/projectWeb/images/img_faceWash/img_1.webp",
-      "stock": 50
-    },
-    {
-      "id": 2,
-      "name": "Sữa rửa mặt Hazeline",
-      "price": 55000,
-      "categoryId": 1,
-      "image": "/projectWeb/images/img_faceWash/img_2.webp",
-      "stock": 30
-    },
-    {
-      "id": 3,
-      "name": "Sữa rửa mặt Hatomuzi",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 95000,
-      "categoryId": 1,
-      "image": "/projectWeb/images/img_faceWash/img_3.webp",
-      "stock": 20
-    },
-    {
-      "id": 4,
+      "id": "4",
       "name": "Sữa rửa mặt Rice milk",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
       "price": 75000,
       "categoryId": 1,
       "image": "/projectWeb/images/img_faceWash/img_4.webp",
-      "stock": 20
+      "stock": 10
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Dầu gội Clear",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
       "price": 200000,
       "categoryId": 2,
       "image": "/projectWeb/images/img_shampoo/shampoo_1.webp",
-      "stock": 20
+      "stock": 5
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Dầu gội NeBlack Tone",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
       "price": 150000,
       "categoryId": 2,
       "image": "/projectWeb/images/img_shampoo/shapoo_2.webp",
-      "stock": 20
+      "stock": 30
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Dầu gội Rejoie",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
       "price": 75000,
       "categoryId": 2,
       "image": "/projectWeb/images/img_shampoo/shampoo_3.webp",
-      "stock": 20
+      "stock": 6
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Dầu gội Dercos",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
       "price": 75000,
@@ -104,31 +79,31 @@
       "stock": 20
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Kem dưỡng da V7Tone",
       "price": 80000,
       "categoryId": 3,
       "image": "/projectWeb/images/img_skinCareScream/img_1.webp",
-      "stock": 20
+      "stock": 15
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Kem dưỡng da bioaqua",
       "price": 99000,
       "categoryId": 3,
       "image": "/projectWeb/images/img_skinCareScream/img_2.webp",
-      "stock": 20
+      "stock":25
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Kem dưỡng da Collagen",
       "price": 230000,
       "categoryId": 3,
       "image": "/projectWeb/images/img_skinCareScream/img_3.webp",
-      "stock": 20
+      "stock": 10
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Kem dưỡng da Laneige",
       "price": 80000,
       "categoryId": 3,
@@ -136,23 +111,15 @@
       "stock": 20
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Kem dưỡng da Nivea",
       "price": 300000,
       "categoryId": 3,
       "image": "/projectWeb/images/img_skinCareScream/img_5.webp",
-      "stock": 20
+      "stock": 5
     },
     {
-      "id": 14,
-      "name": "Kem dưỡng da L'Paris",
-      "price": 150000,
-      "categoryId": 3,
-      "image": "/projectWeb/images/img_skinCareScream/img_6.webp",
-      "stock": 20
-    },
-    {
-      "id": 15,
+      "id": "15",
       "name": "Kem dưỡng da Redwin",
       "price": 230000,
       "categoryId": 3,
@@ -160,7 +127,7 @@
       "stock": 20
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Kem dưỡng da Aura",
       "price": 230000,
       "categoryId": 3,
@@ -168,31 +135,31 @@
       "stock": 20
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Kem dưỡng da Simple",
       "price": 70000,
       "categoryId": 3,
       "image": "/projectWeb/images/img_skinCareScream/img_9.webp",
-      "stock": 20
+      "stock": 35
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Kem dưỡng da Deleventh",
       "price": 200000,
       "categoryId": 3,
       "image": "/projectWeb/images/img_skinCareScream/img_10.webp",
-      "stock": 20
+      "stock": 16
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Sữa tắm Dove",
       "price": 150000,
       "categoryId": 4,
       "image": "/projectWeb/images/img_cleanser/img_1.webp",
-      "stock": 20
+      "stock": 25
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Sữa tắm Purité",
       "price": 200000,
       "categoryId": 4,
@@ -200,34 +167,25 @@
       "stock": 20
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Sữa tắm Pharmacity",
       "price": 150000,
       "categoryId": 4,
       "image": "/projectWeb/images/img_cleanser/img_3.webp",
-      "stock": 20
+      "stock": 15
     },
     {
-      "id": 21,
+      "id": "22",
       "name": "Sữa tắm ST.Ives",
       "price": 110000,
       "categoryId": 4,
       "image": "/projectWeb/images/img_cleanser/img_4.webp",
       "stock": 20
-    },
-    {
-      "id": 22,
-      "name": "Sữa tắm LOVEBEAUTY ",
-      "price": 150000,
-      "categoryId": 4,
-      "image": "/projectWeb/images/img_cleanser/img_5.webp",
-      "stock": 20
-    }
-
+    } 
   ],
-  "new_arrivals":[
-      {
-      "id": 1,
+  "new_arrivals": [
+    {
+      "id": "1",
       "name": "Sữa rửa mặt Senka",
       "price": 80000,
       "categoryId": 1,
@@ -235,15 +193,15 @@
       "stock": 50
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Sữa rửa mặt Hazeline",
       "price": 55000,
       "categoryId": 1,
       "image": "/projectWeb/images/img_faceWash/img_2.webp",
       "stock": 30
     },
-     {
-      "id": 6,
+    {
+      "id": "6",
       "name": "Dầu gội NeBlack Tone",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
       "price": 150000,
@@ -252,7 +210,7 @@
       "stock": 20
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Dầu gội Rejoie",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
       "price": 75000,
@@ -261,9 +219,9 @@
       "stock": 20
     }
   ],
-  "best_sellers":[
+  "best_sellers": [
     {
-      "id": 3,
+      "id": "3",
       "name": "Sữa rửa mặt Hatomuzi",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
       "price": 95000,
@@ -272,7 +230,7 @@
       "stock": 20
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Kem dưỡng da Collagen",
       "price": 230000,
       "categoryId": 3,
@@ -280,7 +238,7 @@
       "stock": 20
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Kem dưỡng da Laneige",
       "price": 80000,
       "categoryId": 3,
@@ -288,36 +246,35 @@
       "stock": 20
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Sữa tắm ST.Ives",
       "price": 110000,
       "categoryId": 4,
       "image": "/projectWeb/images/img_cleanser/img_4.webp",
       "stock": 20
     }
-
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Sữa rửa mặt"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Dầu gội "
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Kem dưỡng da"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Sữa tắm"
     }
   ],
   "payments": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 2,
       "orderId": 1,
       "method": "Thẻ tín dụng",
@@ -326,7 +283,7 @@
       "paymentDate": "2024-10-01"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 3,
       "orderId": 2,
       "method": "Chuyển khoản ngân hàng",
@@ -335,23 +292,33 @@
       "paymentDate": "2024-10-02"
     }
   ],
- "orders": [
+  "orders": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 2,
-      "productIds": [1, 2],
-      "quantities": [2, 1],  
+      "productIds": [
+        1,
+        2
+      ],
+      "quantities": [
+        2,
+        1
+      ],
       "totalAmount": 350000,
       "orderDate": "2024-10-01",
       "status": "Đang xử lý"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 3,
-      "productIds": [3],
-      "quantities": [1],  
+      "productIds": [
+        3
+      ],
+      "quantities": [
+        1
+      ],
       "orderDate": "2024-10-02",
       "status": "Đã giao"
     }
-]
+  ]
 }
