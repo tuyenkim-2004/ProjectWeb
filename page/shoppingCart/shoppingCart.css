@@ -62,3 +62,27 @@ justify-content: end;
     background: #a05139;
     
 }
+
+.reduce, .increase {
+    margin: 0px;
+    font-size: 25px;
+    width: 70px;
+    background: lightgray;
+    border: 1px solid lightgray;
+    color: #a05139;
+
+}
+
+.reduce:hover, .increase:hover {
+    background: #ffece1;
+    border: 1px solid gray;
+    color: black;
+}
+
+.delete {
+    width: 40px;
+    font-size: 15px;   
+}
+.delete:hover {
+    background: orangered;
+}
