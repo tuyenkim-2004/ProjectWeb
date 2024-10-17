@@ -1,38 +1,3 @@
-// fetch('http://localhost:3000/new_arrivals')
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (new_arrivals) {
-//         const protList_1 = document.querySelector('.product_1');
-//         // const protList_2 = document.querySelector('.product_2');
-//         new_arrivals.forEach(product => {
-//             // Tạo một phần tử div để chứa sản phẩm
-//             const demo = document.createElement('div'); 
-//             demo.classList.add('col-3');
-//             demo.innerHTML = `
-//                 <div class="card">
-//                     <img class="card-img-top" src="${product.image}" alt="Card image" style="width:100%">
-//                     <div class="card-body text-center">
-//                         <h4 class="card-title" class="">${product.name}</h4>
-//                         <p class="card-text">${product.price} VNĐ</p>
-//                         <a href="#" class="btn btn-primary btn-order">Mua</a>
-//                         <a href="#" class="btn btn-primary btn-shopping">
-//                             <i class="bi bi-handbag-fill icon-shopping"></i>
-//                         </a>
-//                     </div>
-//                 </div>
-//             `;
-
-//             // Thêm phần tử demo vào productList
-//             protList_1.appendChild(demo);
-//         });
-        
-//     })
-//     .catch(function (error) {
-//         console.error('Lỗi khi lấy dữ liệu sản phẩm:', error);
-//     });
-
-
 
 function fetchAndDisplayProducts(url, selector) {
     fetch(url)
@@ -131,3 +96,4 @@ function displayProducts(products) {
             productList.appendChild(demo);
     });
 }
+

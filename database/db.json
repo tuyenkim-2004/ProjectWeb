@@ -14,22 +14,33 @@
       "id": 1,
       "username": "tuyen",
       "password": "tuyen123",
+      "phone": "0348626820",
       "roleId": 1,
       "email": "tuyenkimnguyen107@gmail.com"
     },
     {
-      "id": 2,
-      "username": "customer1",
-      "password": "customer123",
+      "id": 1728914099294,
+      "username": "123",
+      "password": "123",
+      "phone": "123",
       "roleId": 2,
-      "email": "customer1@example.com"
+      "email": "123@gmail.com"
     },
     {
-      "id": 3,
-      "username": "customer2",
-      "password": "customer456",
+      "id": 1728918481966,
+      "username": "nguyendat",
+      "password": "12345678",
+      "phone": "030805000",
       "roleId": 2,
-      "email": "customer2@example.com"
+      "email": "dat@123.com"
+    },
+    {
+      "id": 1729067753798,
+      "username": "Nguyễn Thị Kim Tuyền",
+      "password": "123456789",
+      "phone": "0348626820",
+      "roleId": 2,
+      "email": "tuyen.nguyen25@student.passerellesnumeriques.org"
     }
   ],
   "products": [
@@ -223,10 +234,9 @@
       "image": "/projectWeb/images/img_cleanser/img_5.webp",
       "stock": 20
     }
-
   ],
-  "new_arrivals":[
-      {
+  "new_arrivals": [
+    {
       "id": 1,
       "name": "Sữa rửa mặt Senka",
       "price": 80000,
@@ -242,7 +252,7 @@
       "image": "/projectWeb/images/img_faceWash/img_2.webp",
       "stock": 30
     },
-     {
+    {
       "id": 6,
       "name": "Dầu gội NeBlack Tone",
       "description": "Giúp làm sạch và cân bằng độ pH cho da.",
@@ -261,7 +271,7 @@
       "stock": 20
     }
   ],
-  "best_sellers":[
+  "best_sellers": [
     {
       "id": 3,
       "name": "Sữa rửa mặt Hatomuzi",
@@ -295,7 +305,6 @@
       "image": "/projectWeb/images/img_cleanser/img_4.webp",
       "stock": 20
     }
-
   ],
   "categories": [
     {
@@ -335,12 +344,18 @@
       "paymentDate": "2024-10-02"
     }
   ],
- "orders": [
+  "orders": [
     {
       "id": 1,
       "userId": 2,
-      "productIds": [1, 2],
-      "quantities": [2, 1],  
+      "productIds": [
+        1,
+        2
+      ],
+      "quantities": [
+        2,
+        1
+      ],
       "totalAmount": 350000,
       "orderDate": "2024-10-01",
       "status": "Đang xử lý"
@@ -348,11 +363,32 @@
     {
       "id": 2,
       "userId": 3,
-      "productIds": [3],
-      "quantities": [1],  
+      "productIds": [
+        3
+      ],
+      "quantities": [
+        1
+      ],
       "orderDate": "2024-10-02",
       "status": "Đã giao"
     }
-]
+  ],
+  "carts": [
+    {
+      "quantity": 1,
+      "id": 1
+    },
+    {
+      "quantity": 1,
+      "id": 2
+    },
+    {
+      "quantity": 1,
+      "id": 3
+    },
+    {
+      "quantity": 1,
+      "id": 4
+    }
+  ]
 }
-
