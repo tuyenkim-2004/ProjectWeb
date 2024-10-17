@@ -87,4 +87,3 @@ function changeQuanlity (type) {
         })
     }
 }
-

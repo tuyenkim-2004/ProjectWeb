@@ -34,7 +34,8 @@ function save() {
         image: imageUrl,
         describes:describe,
     };
-
+    fetch('')
+    // body string.json(product)
     arr.push(product);
 
     

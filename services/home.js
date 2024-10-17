@@ -105,6 +105,7 @@ function displayProducts(products) {
     });
 }
 
+
 function getOnclick () {
     setTimeout (()=> {
         var list = document.getElementsByClassName('btn-shopping')
@@ -144,9 +145,4 @@ function gioHang () {
             giohang.innerText = `Giỏ hàng (${total})`
       }
 }
-
-
-
-
-
 
