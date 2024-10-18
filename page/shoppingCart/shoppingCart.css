@@ -1,0 +1,64 @@
+table {
+    border: 1px solid #000;
+}
+
+#navbar-cart {
+    background-color:  #ffece1;
+    position: relative; 
+    display: flex;
+    gap: 15px;
+    left:10px ;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+ 
+#navbar-cart a {
+    text-decoration: none;
+}
+
+#navbar-toHome {
+    color: #000;
+}
+
+#navbar-toHome:hover {
+    color: #a05139;
+}
+
+#tbody .container {
+    display: flex;
+    align-items: center;
+}
+
+td img {
+    height: 150px;
+    /* border: 1px solid #000; */
+}
+
+td {
+    align-content: center;
+}
+
+p {
+    font-size: 150%;
+}
+
+.productDelete:hover {
+    color: #a05139;
+}
+#buy {
+    display: flex;
+justify-content: end;
+}
+
+#bt-buy {
+    padding: 15px;
+    font-size: 18px;
+    color: #a05139;
+}
+
+#bt-buy:hover {
+    color: white;
+    background: #a05139;
+    
+}
