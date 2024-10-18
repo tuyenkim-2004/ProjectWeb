@@ -48,18 +48,21 @@ p {
 }
 #buy {
     display: flex;
-justify-content: end;
+    justify-content: end;
 }
 
 #bt-buy {
+    right:  0px;
     padding: 15px;
     font-size: 18px;
     color: #a05139;
+    background: #ffb9a4;;
 }
 
 #bt-buy:hover {
-    color: white;
-    background: #a05139;
+    color: #ffb9a4;
+    background: white;
+    border: 1px solid #ffb9a4;;
     
 }
 
@@ -74,15 +77,16 @@ justify-content: end;
 }
 
 .reduce:hover, .increase:hover {
-    background: #ffece1;
-    border: 1px solid gray;
+    background: #ffb9a4;;
     color: black;
 }
 
 .delete {
     width: 40px;
     font-size: 15px;   
+    border: none;
+    background: white;
 }
 .delete:hover {
-    background: orangered;
+    color: red;
 }

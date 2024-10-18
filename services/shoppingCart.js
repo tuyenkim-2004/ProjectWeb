@@ -5,16 +5,12 @@ window.addEventListener('storage', function () {
     display()
     gioHang()
     setTimeout(()=> {
-    changeQuanlity('reduce')
-    changeQuanlity('increase')
-    changeQuanlity('delete')
+        action(['reduce', 'increase', 'delete'])
 },60)
 })
 
 setTimeout(()=> {
-    changeQuanlity('reduce')
-    changeQuanlity('increase')
-    changeQuanlity('delete')
+    action(['reduce', 'increase', 'delete'])
 },60)
 
 function display () {
@@ -85,5 +81,11 @@ function changeQuanlity (type) {
 
             }
         })
+    }
+}
+
+function action (listType) {
+    for (let i = 0; i < listType.length; i++) {
+        changeQuanlity(listType[i])
     }
 }
