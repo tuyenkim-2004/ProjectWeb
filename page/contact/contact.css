@@ -1,0 +1,75 @@
+.container_contact {
+    background-color: #feece0; 
+}
+.container_contact ul {
+    display: flex; 
+    list-style: none;
+    height: 40px;
+    margin-left: 80px;
+    gap: 5px;
+    line-height: 40px;
+}
+h2{
+    margin-left: 110px;
+    margin-top: 20px;
+}
+.google_maps{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 110px;
+}
+.ifo_detail{
+    margin-left: 30px;
+}
+.ifo_detail .img {
+   display: inline-flex;
+    align-items: center; 
+    gap: 5px;
+    margin: 0;
+}
+.img p {
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+    margin: 0; 
+}
+.form_contact{
+    margin-left: 100px;
+}
+
+.group_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin-bottom: 40px; 
+}
+
+.name, .number_phone, .email, .form_control, .btn-lienhe {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+}
+.group_form .name{
+    width: 520px;
+}
+.group_form .form_control{
+    width: 520px; 
+}
+.input {
+    display: flex;
+    gap: 9px; 
+    flex-wrap: wrap; 
+}
+.input input{
+    width: 18%;
+}
+.btn-lienhe{
+    width: 200px;
+    background-color: #feece0;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+.btn-lienhe:hover{
+    background-color: rgb(244, 199, 187);
+}
