@@ -17,12 +17,13 @@ function fetchAndDisplayProducts(url, selector) {
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
                             <a href="#" class="btn btn-primary btn-order">Mua</a>
-                            <a href="#" class="btn btn-primary btn-shopping">
+                            <button class="btn btn-primary btn-shopping" name="${product.id}">
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 `;
+                
                 productList.appendChild(demo);
             });
         })
@@ -64,6 +65,13 @@ document.querySelectorAll('.category').forEach(function(category) {
     });
 });
 
+// DO Thanh Binh -- SHOPPING CART
+gioHang()
+window.addEventListener('storage', function () {
+   gioHang()
+})
+getOnclick()
+
 function displayProducts(products) {
     const productList = document.getElementById('product-list');
     productList.innerHTML = ''; 
@@ -85,9 +93,9 @@ function displayProducts(products) {
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
                             <a href="#" class="btn btn-primary btn-order">Mua</a>
-                            <a href="#" class="btn btn-primary btn-shopping">
+                            <button class="btn btn-primary btn-shopping" name=${product.id}">
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
             `;
@@ -95,5 +103,46 @@ function displayProducts(products) {
             // Thêm phần tử demo vào productList
             productList.appendChild(demo);
     });
+}
+
+
+function getOnclick () {
+    setTimeout (()=> {
+        var list = document.getElementsByClassName('btn-shopping')
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener ('click', function () {
+                var product_id = list[i].name;
+                fetch(`http://localhost:3000/products/${product_id}`)
+                .then (response => response.json())
+                .then (product=> {
+                    changeQuanlity(product)
+                })
+                .catch ()
+            })
+        }
+    }, 100)
+}
+
+function changeQuanlity (product) {
+    try {
+        var data = JSON.parse(localStorage.getItem(`${product.id}`))
+        localStorage.setItem(`${product.id}`, JSON.stringify([`${product.id}`,++data[1]]))
+    } catch (e) {
+        localStorage.setItem(`${product.id}`,JSON.stringify ([product.id, 1]))
+    }
+    gioHang()
+}
+
+function gioHang () {
+    const giohang = document.getElementById('giohang')
+    var total = 0
+    Object.entries(localStorage).forEach(([key, value]) => {
+        (total += JSON.parse(value)[1]);
+      });
+      if (total == 0) {
+        giohang.innerText = `Giỏ hàng`
+      } else {
+            giohang.innerText = `Giỏ hàng (${total})`
+      }
 }
 
