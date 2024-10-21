@@ -30,45 +30,23 @@
       "password": "customer456",
       "roleId": 2,
       "email": "customer2@example.com"
-    }
-  ],
-  "products": [
+    },
     {
       "id": "4",
-      "name": "Sữa rửa mặt Rice milk",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 75000,
-      "categoryId": 1,
-      "image": "/projectWeb/images/img_faceWash/img_4.webp",
-      "stock": 10
+      "username": "customer2",
+      "password": "customer456",
+      "roleId": 2,
+      "email": "customer2@example.com"
     },
     {
       "id": "5",
-      "name": "Dầu gội Clear",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 200000,
-      "categoryId": 2,
-      "image": "/projectWeb/images/img_shampoo/shampoo_1.webp",
-      "stock": 5
-    },
-    {
-      "id": "6",
-      "name": "Dầu gội NeBlack Tone",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 150000,
-      "categoryId": 2,
-      "image": "/projectWeb/images/img_shampoo/shapoo_2.webp",
-      "stock": 30
-    },
-    {
-      "id": "7",
-      "name": "Dầu gội Rejoie",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 75000,
-      "categoryId": 2,
-      "image": "/projectWeb/images/img_shampoo/shampoo_3.webp",
-      "stock": 6
-    },
+      "username": "customer2",
+      "password": "customer456",
+      "roleId": 2,
+      "email": "customer2@example.com"
+    }
+  ],
+  "products": [
     {
       "id": "8",
       "name": "Dầu gội Dercos",
@@ -92,7 +70,7 @@
       "price": 99000,
       "categoryId": 3,
       "image": "/projectWeb/images/img_skinCareScream/img_2.webp",
-      "stock":25
+      "stock": 25
     },
     {
       "id": "11",
@@ -181,7 +159,7 @@
       "categoryId": 4,
       "image": "/projectWeb/images/img_cleanser/img_4.webp",
       "stock": 20
-    } 
+    }
   ],
   "new_arrivals": [
     {

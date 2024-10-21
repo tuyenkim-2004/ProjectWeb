@@ -71,3 +71,13 @@ table {
         display: none;
     }
 }
+#tble{
+    font-size: 20px;
+    font-weight: bold;
+}
+#tble td{
+    border: 2px solid black;
+}
+.showCut{
+    display: none;
+}

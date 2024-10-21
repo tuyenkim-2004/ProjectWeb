@@ -1,8 +1,9 @@
 var apiUrl = 'http://localhost:3000/products';
 var arr = [];
-let currentId = 0; 
+var currentId = 0; 
 // Hàm lưu sản phẩm vào API
 async function save() {
+    var id = document.getElementById('productId').value; // Lấy ID sản phẩm
     var name = document.getElementById('prn').value;
     var price = parseFloat(document.getElementById('pre').value);
     var stock = parseInt(document.getElementById('tlq').value);
@@ -13,32 +14,42 @@ async function save() {
         alert('Vui lòng điền đầy đủ thông tin hợp lệ!');
         return; 
     }
-    currentId++;
+
     var product = {
-        id: currentId.toString(),
         name: name,
         price: price,
         stock: stock,
-        image: imageUrl,    
+        image: imageUrl, 
     };
 
-    // Gửi yêu cầu POST để lưu sản phẩm
-    var response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(product),
-    });
+    var response;
+    if (id) {
+        response = await fetch(`${apiUrl}/${id}`, {
+            method: 'PUT', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(product),
+        });
+    } else {
+        response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(product),
+        });
+    }
 
     if (response.ok) {
         loadProducts(); // Tải lại danh sách sản phẩm
         resetForm(); // Đặt lại form
+        var modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+        modal.hide(); // Ẩn modal
     } else {
         alert('Lỗi khi lưu sản phẩm!');
     }
 }
-
 // Tải sản phẩm từ API
 async function loadProducts() {
     var response = await fetch(apiUrl);
@@ -51,7 +62,7 @@ async function loadProducts() {
 // Hiển thị sản phẩm
 function show() {
     var showPrd = '';
-    for (let i in arr) {
+    for (var i in arr) {
         var n = parseInt(i) + 1;
         showPrd += "<tr>";
         showPrd += "<td>" + n + "</td>";
@@ -59,13 +70,13 @@ function show() {
         showPrd += "<td>" + arr[i].price + "</td>";
         showPrd += "<td>" + arr[i].stock + "</td>";
         showPrd += "<td><img src='" + arr[i].image + "' width='100' height='100' style='object-fit:cover;'></td>";
-        showPrd += "<td><button class='dele' onclick='dete(" + arr[i].id + ")'>Xóa</button></td>"; // Nút xóa
+        showPrd += "<td><button class='dele' onclick='dete(" + arr[i].id + ")'>Xóa</button> <button class='dele' onclick='fix(" + arr[i].id + ")'>Sửa</button></td>";
         showPrd += "</tr>";
     }
     document.getElementById('product-table-body').innerHTML = showPrd;
 }
 function updateDashboard() {
-    var labels = arr.map(product => product.name);
+    var labels = arr.map(product => product.name);  
     var stockData = arr.map(product => product.stock);
 
     var ctx = document.getElementById('salesChart').getContext('2d');
@@ -130,15 +141,15 @@ function updateDashboard() {
         }
     });
 }
-// Hàm xóa sản phẩm dựa trên ID
 async function dete(id) {
     if (confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?')) {
         var response = await fetch(`${apiUrl}/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE', 
         });
 
         if (response.ok) {
-            loadProducts(); // Tải lại danh sách sp
+            loadProducts(); 
+            alert('Xóa sản phẩm thành công!'); 
         } else {
             var errorText = await response.text();
             alert(`Lỗi khi xóa sản phẩm! Mã lỗi: ${response.status}, Thông báo: ${errorText}`);
@@ -146,7 +157,21 @@ async function dete(id) {
     }
 }
 
-// Hàm đặt lại form
+async function fix(id) {
+    var response = await fetch(`${apiUrl}/${id}`);
+    var product = await response.json();
+
+
+    document.getElementById('productId').value = product.id; 
+    document.getElementById('prn').value = product.name; 
+    document.getElementById('pre').value = product.price; 
+    document.getElementById('tlq').value = product.total; 
+
+    var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    modal.show();
+}
+
+
 function resetForm() {
     document.getElementById('prn').value = '';
     document.getElementById('pre').value = '';
@@ -157,5 +182,5 @@ function resetForm() {
     modal.hide();
 }
 
-// Tải sản phẩm khi trang được tải
+
 window.onload = loadProducts;

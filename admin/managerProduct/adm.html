@@ -26,14 +26,14 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div class="navbar-nav ">
                         <a class="nav-link active" aria-current="page" href="#">Quản lý Sản phẩm</a>
-                        <a class="nav-link active" aria-current="page" href="/admin/managerShopping/shoppingCart.html">Quản Lý Giỏ Hàng</a>
-                        <a class="nav-link active" href="/admin/managerCustomer/ctm.html">Quản lý Khách hàng</a>
+                        <a class="nav-link active" aria-current="page" href="/projectWeb/admin/managerShopping/shoppingCart.html">Quản Lý Giỏ Hàng</a>
+                        <a class="nav-link active" href="/projectWeb/admin/managerCustomer/ctm.html">Quản lý Khách hàng</a>
                     </div>
                 </div>
             </div>
         </nav>
         <div id="dashboard" class="my-4">
-            <canvas id="salesChart" width="400" height="100"></canvas>
+            <canvas id="salesChart" width="100%" height="40%"></canvas>
         </div>
         <div class="control">
             <div class="show">
@@ -48,7 +48,7 @@
                 </div>
                 
                 
-                <!-- Modal -->
+                <!----------------------------------------------------------------- Modal ------------------------------------------------------------>
                 <div class="modal show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
                     <div class="modal-dialog "> <!-- Thêm modal-dialog-centered để căn giữa theo chiều dọc -->
                         <div class="modal-content">
@@ -90,6 +90,50 @@
                         </div>
                     </div>
                 </div>
+                <!------------------------------------------------------Modal sửa sản phẩm--------------------------------------------------------------------->
+                <div class="modal show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <h2>Sửa Sản phẩm</h2>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="form-box">
+                                        <input type="hidden" id="productId"> <!-- Trường ẩn để lưu ID sản phẩm -->
+                                        <div class="mb-3">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Tên sản phẩm</div>
+                                                <input type="text" id="prn" placeholder="Tên sản phẩm">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Giá</div>
+                                                <input type="text" id="pre" placeholder="Giá">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Hình ảnh</div>
+                                                <input type="file" id="img" placeholder="Hình ảnh">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Tổng sản phẩm</div>
+                                                <input type="text" id="tlq" placeholder="Tổng sản phẩm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-primary" onclick="save()">Lưu thay đổi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------------------------------------------------------------------------->
             </div>
         </div>
         <div class="tbl">
