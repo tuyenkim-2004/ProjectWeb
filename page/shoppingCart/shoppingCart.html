@@ -1,0 +1,196 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/projectWeb/page/home/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./shoppingCart.css">
+</head>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="/projectWeb/images/img_panner/logo.webp" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/projectWeb/page/home/home.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item2 dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sản phẩm
+                            </a>
+                            <ul class="sub_menu dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" aria-expanded="false">
+                                        Kem dưỡng da
+                                    </a>
+                                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <li><a class="dropdown-item" href="#">V7 Toning Light</a></li>
+                                        <li><a class="dropdown-item" href="#">Bioaqua</a></li>
+                                        <li><a class="dropdown-item" href="#">Collagen</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Sữa rửa mặt</a>
+                                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <li><a class="dropdown-item" href="#">Senka</a></li>
+                                        <li><a class="dropdown-item" href="#">Hazeline</a></li>
+                                        <li><a class="dropdown-item" href="#">Rice Milk</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Dầu gội</a>
+                                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <li><a class="dropdown-item" href="#">Clear</a></li>
+                                        <li><a class="dropdown-item" href="#">Rejoie</a></li>
+                                        <li><a class="dropdown-item" href="#">Dercos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Sữa tắm</a>
+                                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <li><a class="dropdown-item" href="#">Dove</a></li>
+                                        <li><a class="dropdown-item" href="#">Pharmacity</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Liên hệ
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" id="giohang">Giỏ hàng</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex search-form">
+                        <i class="bi2 bi-search search-icon"></i>
+                        <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                        
+                        <div class="sub_search">
+                            <div class="user-icon">
+                                <a href="#">
+                                    <i class="bi3 bi-person-fill"></i>
+                                </a>
+                                <div class="user_menu dropdown-menu">
+                                    <a href="#" class="dropdown-item">Đăng Nhập</a>
+                                    <a href="#" class="dropdown-item">Đăng Ký</a>
+                                </div>
+                            </div>
+                            
+                            <a href="#"><i class="bi bi-handbag-fill"></i></a>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container" id ="navbar-cart">
+        <a href="/projectWeb/page/home/home.html"><h5 id="navbar-toHome">Trang Chủ</h5></a>
+        <h5>》</h5>
+       <h5>Giỏ Hàng</h5>
+    </div>
+    <div class="container">
+        <table class="table" id="table">
+            <thead id="thead">
+              <tr>
+                <th class="col-6">Thông Tin</th>
+                <th class="col-2">Đơn Giá</th>
+                <th class="col-2">Số Lượng</th>
+                <th class="col-2">Thành Tiền</th>
+              </tr>
+            </thead>
+        <tbody id="tbody">
+            </tbody>
+          </table>
+    </div>
+
+    <div class="container" id="buy">
+        <button class="col-6" type="button" id="bt-buy"><b>Thanh Toán</b></button>
+      </div>
+
+      <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="/projectWeb/images/icon/facebook.png" alt="" class="img-icon">
+                    <img src="/projectWeb/images/icon/messengar.png" alt="" class="img-icon">
+                    <img src="/projectWeb/images/icon/insta.png" alt="" class="img-icon">
+                </div>
+                <div class="col-4">
+                    <img src="/projectWeb/images/icon/gmail.png" alt="" class="img-icon">
+                    <p>Nhập bản tin làm dẹp cùng chúng tôi </p>
+                </div>
+                <div class="col-4">
+                    <input type="text" placeholder="Nhập email của bạn" id="input-footer">
+                    <button class="btn-re">Đăng ký </button>
+                </div>
+            </div>
+        </div>     
+    </div>
+    </div>
+    <div class="container" class="footer">
+        <div class="row">
+            <div class="col-3">
+                <img src="/projectWeb/images/img_panner/logo.webp" alt="">
+                <div class="img">
+                    <img src="/projectWeb/images/icon/location.png" alt="" id="img-icon">
+                    <p>Lê Hữu Trác - Sơn Trà - Đà Nẵng </p>
+                </div>
+                <div class="img">
+                    <img src="/projectWeb/images/icon/email.png" alt="" id="img-icon">
+                    <p>tuyenkimnguyen107@gmail.com</p>
+                </div>
+                <div class="img">
+                    <img src="/projectWeb/images/icon/call.png" alt="" id="img-icon">
+                    <p>0348626</p>
+                </div>                
+                <div class="img">
+                    <img src="/projectWeb/images/icon/restaurant.png" alt="" id="img-icon">
+                    <p>Hệ thống nhà hàng </p>
+                </div>     
+            </div>
+            <div class="col-3">
+                <h4>HỖ TRỢ KHÁCH HÀNG </h4>
+                <p>Trang chủ</p>
+                <p>Sản phẩm</p>
+                <p>Liên hệ</p>
+                <p>Tin tức</p>
+                <p>Giỏ hàng</p>
+                <p>Tìm kiếm</p>
+            </div>
+            <div class="col-3">
+                <h4>CHÍNH SÁCH </h4>
+                <p>Trang chủ</p>
+                <p>Giới thiệu</p>
+                <p>Sản phẩm</p>
+                <p>Liên hệ</p>
+                <p>Tin tức</p>
+                <p>Giỏ hàng</p>
+                <p>Tìm kiếm</p>
+            </div>
+            <div class="col-3">
+                <h4>GIỜ MỞ CỬA </h4>
+                <p>Từ 9:00 - 21:30 tất cả các ngày trong tuần (bao gồm cả các ngày lễ, ngày Tết).</p>
+                <h5>Góp ý, Khiếu nại</h5>
+                <div class="img">
+                    <img src="/projectWeb/images/icon/call.png" alt="" id="img-icon">
+                    <p>0348626</p>
+                </div>                    
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/projectWeb/services/home.js"></script>
+    <script src="/projectWeb/services/shoppingCart.js"  type="module"></script>
+</body>
+  </html>

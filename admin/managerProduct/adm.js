@@ -42,6 +42,10 @@ async function save() {
             body: JSON.stringify(product),
         });
     }
+    fetch('')
+    // body string.json(product)
+    arr.push(product);
+
 
     if (response.ok) {
         loadProducts(); // Tải lại danh sách sản phẩm

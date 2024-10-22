@@ -1,38 +1,3 @@
-// fetch('http://localhost:3000/new_arrivals')
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (new_arrivals) {
-//         const protList_1 = document.querySelector('.product_1');
-//         // const protList_2 = document.querySelector('.product_2');
-//         new_arrivals.forEach(product => {
-//             // Tạo một phần tử div để chứa sản phẩm
-//             const demo = document.createElement('div'); 
-//             demo.classList.add('col-3');
-//             demo.innerHTML = `
-//                 <div class="card">
-//                     <img class="card-img-top" src="${product.image}" alt="Card image" style="width:100%">
-//                     <div class="card-body text-center">
-//                         <h4 class="card-title" class="">${product.name}</h4>
-//                         <p class="card-text">${product.price} VNĐ</p>
-//                         <a href="#" class="btn btn-primary btn-order">Mua</a>
-//                         <a href="#" class="btn btn-primary btn-shopping">
-//                             <i class="bi bi-handbag-fill icon-shopping"></i>
-//                         </a>
-//                     </div>
-//                 </div>
-//             `;
-
-//             // Thêm phần tử demo vào productList
-//             protList_1.appendChild(demo);
-//         });
-        
-//     })
-//     .catch(function (error) {
-//         console.error('Lỗi khi lấy dữ liệu sản phẩm:', error);
-//     });
-
-
 
 function fetchAndDisplayProducts(url, selector) {
     fetch(url)
@@ -44,17 +9,21 @@ function fetchAndDisplayProducts(url, selector) {
                 demo.classList.add('col-3');
                 demo.innerHTML = `
                     <div class="card">
-                        <img class="card-img-top" src="${product.image}" alt="Card image" style="width:100%">
+
+                        <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
+                            <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
+                        </a>
                         <div class="card-body text-center">
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
-                            <a href="#" class="btn btn-primary btn-order">Mua</a>
-                            <a href="#" class="btn btn-primary btn-shopping">
+                            <a href="/projectWeb/page/payment/payment.html" class="btn btn-primary btn-order">Mua</a>
+                            <button class="btn btn-primary btn-shopping" name="${product.id}">
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 `;
+                
                 productList.appendChild(demo);
             });
         })
@@ -65,6 +34,10 @@ function fetchAndDisplayProducts(url, selector) {
 
 // Fetch và hiển thị sản phẩm mới về
 fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1');
+console.log (
+fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1')
+
+)
 
 // Fetch và hiển thị sản phẩm bán chạy
 fetchAndDisplayProducts('http://localhost:3000/best_sellers', '.product_2');
@@ -92,9 +65,16 @@ document.querySelectorAll('.category').forEach(function(category) {
     });
 });
 
+// DO Thanh Binh -- SHOPPING CART
+gioHang()
+window.addEventListener('storage', function () {
+   gioHang()
+})
+getOnclick()
+
 function displayProducts(products) {
     const productList = document.getElementById('product-list');
-    productList.innerHTML = ''; // Xóa danh sách cũ
+    productList.innerHTML = ''; 
 
     if (products.length === 0) {
         productList.innerHTML = '<p>Không có sản phẩm nào trong danh mục này.</p>';
@@ -106,19 +86,62 @@ function displayProducts(products) {
             demo.classList.add('col-3');
             demo.innerHTML = `
                 <div class="card">
-                    <img class="card-img-top" src="${product.image}" alt="Card image" style="width:100%">
-                    <div class="card-body text-center">
-                        <h4 class="card-title" class="">${product.name}</h4>
-                        <p class="card-text">${product.price} VNĐ</p>
-                        <a href="#" class="btn btn-primary btn-order">Mua</a>
-                        <a href="#" class="btn btn-primary btn-shopping">
-                            <i class="bi bi-handbag-fill icon-shopping"></i>
+                        <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
+                            <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
                         </a>
+                        <div class="card-body text-center">
+                            <h4 class="card-title">${product.name}</h4>
+                            <p class="card-text">${product.price} VNĐ</p>
+                            <a href="/projectWeb/page/payment/payment.html" class="btn btn-primary btn-order">Mua</a>
+                            <button class="btn btn-primary btn-shopping" name=${product.id}">
+                                <i class="bi bi-handbag-fill icon-shopping"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
             `;
 
             // Thêm phần tử demo vào productList
             productList.appendChild(demo);
     });
+}
+
+
+function getOnclick () {
+    setTimeout (()=> {
+        var list = document.getElementsByClassName('btn-shopping')
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener ('click', function () {
+                var product_id = list[i].name;
+                fetch(`http://localhost:3000/products/${product_id}`)
+                .then (response => response.json())
+                .then (product=> {
+                    changeQuanlity(product)
+                })
+                .catch ()
+            })
+        }
+    }, 100)
+}
+
+function changeQuanlity (product) {
+    try {
+        var data = JSON.parse(localStorage.getItem(`${product.id}`))
+        localStorage.setItem(`${product.id}`, JSON.stringify([`${product.id}`,++data[1]]))
+    } catch (e) {
+        localStorage.setItem(`${product.id}`,JSON.stringify ([product.id, 1]))
+    }
+    gioHang()
+}
+
+function gioHang () {
+    const giohang = document.getElementById('giohang')
+    var total = 0
+    Object.entries(localStorage).forEach(([key, value]) => {
+        (total += JSON.parse(value)[1]);
+      });
+      if (total == 0) {
+        giohang.innerText = `Giỏ hàng`
+      } else {
+            giohang.innerText = `Giỏ hàng (${total})`
+      }
 }
