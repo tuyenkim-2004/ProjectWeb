@@ -168,6 +168,7 @@ function create (product_id, product_name, product_img, product_price) {
         products.push(product)
         setLocalStorage(products)
     }
+    alert('Thêm vào giỏ hàng thành công !!!')
 }
 
 function update (product_id, type) {
