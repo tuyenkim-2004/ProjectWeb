@@ -145,4 +145,3 @@ function gioHang () {
             giohang.innerText = `Giỏ hàng (${total})`
       }
 }
-
