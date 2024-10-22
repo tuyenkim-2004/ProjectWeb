@@ -10,91 +10,90 @@
     <link rel="stylesheet" href="./shoppingCart.css">
 </head>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#"><img src="/projectWeb/images/img_panner/logo.webp" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/projectWeb/page/home/home.html">Trang chủ</a>
-                        </li>
-                        <li class="nav-item2 dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Sản phẩm
+        <a class="navbar-brand" href="#"><img src="/projectWeb/images/img_panner/logo.webp" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/projectWeb/page/home/home.html">Trang chủ</a>
+                </li>
+                <li class="nav-item2 dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sản phẩm
+                    </a>
+                    <ul class="sub_menu dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <!-- First dropdown -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" aria-expanded="false">
+                                Kem dưỡng da
                             </a>
-                            <ul class="sub_menu dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" aria-expanded="false">
-                                        Kem dưỡng da
-                                    </a>
-                                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
-                                        <li><a class="dropdown-item" href="#">V7 Toning Light</a></li>
-                                        <li><a class="dropdown-item" href="#">Bioaqua</a></li>
-                                        <li><a class="dropdown-item" href="#">Collagen</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Sữa rửa mặt</a>
-                                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
-                                        <li><a class="dropdown-item" href="#">Senka</a></li>
-                                        <li><a class="dropdown-item" href="#">Hazeline</a></li>
-                                        <li><a class="dropdown-item" href="#">Rice Milk</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Dầu gội</a>
-                                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
-                                        <li><a class="dropdown-item" href="#">Clear</a></li>
-                                        <li><a class="dropdown-item" href="#">Rejoie</a></li>
-                                        <li><a class="dropdown-item" href="#">Dercos</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Sữa tắm</a>
-                                    <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
-                                        <li><a class="dropdown-item" href="#">Dove</a></li>
-                                        <li><a class="dropdown-item" href="#">Pharmacity</a></li>
-                                    </ul>
-                                </li>
+                            <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="#">V7 Toning Light</a></li>
+                                <li><a class="dropdown-item" href="#">Bioaqua</a></li>
+                                <li><a class="dropdown-item" href="#">Collagen</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Liên hệ
-                            </a>
-                            
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Sữa rửa mặt</a>
+                            <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="#">Senka</a></li>
+                                <li><a class="dropdown-item" href="#">Hazeline</a></li>
+                                <li><a class="dropdown-item" href="#">Rice Milk</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#" id="giohang">Giỏ hàng</a>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Dầu gội</a>
+                            <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="#">Clear</a></li>
+                                <li><a class="dropdown-item" href="#">Rejoie</a></li>
+                                <li><a class="dropdown-item" href="#">Dercos</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Sữa tắm</a>
+                            <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="#">Dove</a></li>
+                                <li><a class="dropdown-item" href="#">Pharmacity</a></li>
+                            </ul>
                         </li>
                     </ul>
-                    <form class="d-flex search-form">
-                        <i class="bi2 bi-search search-icon"></i>
-                        <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
-                        
-                        <div class="sub_search">
-                            <div class="user-icon">
-                                <a href="#">
-                                    <i class="bi3 bi-person-fill"></i>
-                                </a>
-                                <div class="user_menu dropdown-menu">
-                                    <a href="#" class="dropdown-item">Đăng Nhập</a>
-                                    <a href="#" class="dropdown-item">Đăng Ký</a>
-                                </div>
-                            </div>
-                            
-                            <a href="http://127.0.0.1:5500/projectWeb/page/shoppingCart/shoppingCart.html" style="text-decoration: none;"><i class="bi bi-handbag-fill"></i>
-                                <p id="quantityNum" style="text-decoration: none;"></p></a></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/projectWeb/page/contact/contact.html" tabindex="-1" aria-disabled="true">Liên hệ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/projectWeb/page/shoppingCart/shoppingCart.html">Giỏ hàng</a>
+                </li>
+            </ul>
+            <form class="d-flex search-form">
+                <i class="bi2 bi-search search-icon"></i>
+                <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                
+                <div class="sub_search">
+                    <div class="user-icon">
+                        <a href="#">
+                            <i class="bi3 bi-person-fill"></i>
+                        </a>
+                        <div class="user_menu dropdown-menu">
+                            <a href="/projectWeb/page/login/login.html" class="dropdown-item" id="login-link">Đăng Nhập</a>
+                            <a href="/projectWeb/page/register/register.html" class="dropdown-item" id="register-link">Đăng Ký</a>
+                            <a href="/projectWeb/page/profile/profile.html" class="dropdown-item hidden" id="profile-link">Trang Cá Nhân</a>
                         </div>
-                        
-                    </form>
+                    </div>
+                    
+                    <a href="http://127.0.0.1:5500/projectWeb/page/shoppingCart/shoppingCart.html" style="text-decoration: none;"><i class="bi bi-handbag-fill"></i>
+                        <p id="quantityNum" style="text-decoration: none;"></p></a></a>
                 </div>
-            </div>
-        </nav>
+                
+            </form>
+        </div>
     </div>
+</nav>
     <div class="container" id ="navbar-cart">
         <a href="/projectWeb/page/home/home.html"><h5 id="navbar-toHome">Trang Chủ</h5></a>
         <h5>》</h5>
@@ -118,10 +117,10 @@
     <div class="container" id="showPay" style="display: flex;">
         <p class="col-2">Đã chọn :</p>
         <p class="col-2" id="hascheck">1</p>
-        <p class="col-2">Số lượng :</p>
-        <p class="col-2" id="quan">2</p>
-        <p class="col-2">thành tiền :</p>
-        <p class="col-2" id="totalPrice">1000</p>
+        <p class="col-2">Số lượng : 0</p>
+        <p class="col-2" id="quan"></p>
+        <p class="col-2">thành tiền : 0</p>
+        <p class="col-2" id="totalPrice">0</p>
     </div>
 
     <div class="container" id="buy">

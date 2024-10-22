@@ -272,18 +272,16 @@ h5{
     font-weight: bolder;
 }
 
-<<<<<<< HEAD
 #quantityNum {
     position: relative;
     top: -45px;
     right: -20px;
     color: #a05139;
-=======
+}
+
 .hidden {
     display: none;
     }
-
-
 
 #logout{
     text-decoration: none;
@@ -293,6 +291,4 @@ h5{
 
 #logout:hover{
     color: #ef977d;
-
->>>>>>> a36062befe36f5bbb61fb783f4c815800146a5ef
 }
