@@ -5,22 +5,25 @@ body{
     position: relative;
 }
 
+
 .dropdown-submenu .dropdown-menu {
     top: 0;
     left: 100%;
     margin-top: -1px;
-    display: none; 
+    display: none;
 }
+
 
 .dropdown-submenu:hover .dropdown-menu {
     display: block;
 }
 
+
 .navbar-nav{
     width: 100%;
     gap: 50px;
     font-size: 24px;
-        
+       
 }
 .search-input, .search-button {
     width: 0;
@@ -30,6 +33,7 @@ body{
     padding: 0;
     border: none;
 }
+
 
 .search-form:hover .search-input{
     width: 150px;
@@ -41,6 +45,7 @@ body{
     width: 50px;
     opacity: 1;
 }
+
 
 .search-icon {
     cursor: pointer;
@@ -56,6 +61,8 @@ body{
 .nav-item:hover .nav-link.active, .nav-item2:hover .nav-link.active{
     color: #ef977d;
 }
+
+
 
 
 .d-flex .bi-person-fill{
@@ -82,9 +89,12 @@ body{
     top: 37px;
 }
 
+
 .user-icon:hover .user_menu{
-    display: block; 
+    display: block;
 }
+
+
 
 
 .icon-shopping{
@@ -101,6 +111,7 @@ body{
     background-size: cover;
     padding: 20px;
 
+
  }
 .banner-2>h2{
     text-align: center;
@@ -116,18 +127,25 @@ body{
     color: #a05139;
     padding: 20px;
 
+
   }
 .row{
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
+
 .card{
     width: 300px;
     margin-bottom: 30px;
     border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.card:hover {
+    transform: translateY(-10px); /* Làm nhô lên */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tăng độ bóng */
+     }  
 .card-img-top{
     border: 1px solid rgb(249, 235, 235);
 }
@@ -154,24 +172,42 @@ body{
     background-color: #fff4f0;
     color: #a05139;
     border: 1px solid #ffb9a4;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .btn-shopping:hover{
     background-color: #ffb9a4;
     color: #a05139;
-    border: none;
+    /* border: none; */
+    transform: translateY(-5px);
+    border: 1px solid #ffb9a4;
 }
 .icon-shopping{
     position: absolute;
     left: 4px;
     bottom: 4px;
     color: #a05139;
+   
 }
 .btn-order:hover{
     border: 1px solid #ffb9a4;
     background-color: #fff4f0;
     color: #a05139;
-
+    font-weight: bold; /* Làm đậm chữ khi hover */
+    /* transform: scale(1.05);  */
+    transform: translateY(-5px);
+    border: 1px solid #ffb9a4;
 }
+.btn-order {
+
+
+    width: 180px;  
+    height: 40px;    
+    background-color: #ffb9a4;
+    color: #180f0c;
+    border: none;
+    font-weight: bolder;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    }
 #navbar-tcmp {
     display: flex;
     justify-content: center;
@@ -208,6 +244,7 @@ body{
 .img>p{
     margin-left: 20px;
 }
+
 
 .col-3>h4{
     font-size: 24px;
@@ -246,6 +283,7 @@ h5{
     margin-left: 10px;
 }
 
+
 #input-footer{
     height: 50px;
     width: 80%;
@@ -260,3 +298,9 @@ h5{
     color: #a05139;
     font-weight: bolder;
 }
+
+
+   
+
+
+   
