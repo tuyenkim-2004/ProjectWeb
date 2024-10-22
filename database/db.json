@@ -41,6 +41,30 @@
       "phone": "0348626820",
       "roleId": 2,
       "email": "tuyen.nguyen25@student.passerellesnumeriques.org"
+    },
+    {
+      "id": 1729610600685,
+      "username": "HIep",
+      "password": "123456780",
+      "phone": "0348626820",
+      "roleId": 2,
+      "email": "hiep@gmail.com"
+    },
+    {
+      "id": 1729610601507,
+      "username": "HIep",
+      "password": "123456780",
+      "phone": "0348626820",
+      "roleId": 2,
+      "email": "hiep@gmail.com"
+    },
+    {
+      "id": 1729610602247,
+      "username": "HIep",
+      "password": "123456780",
+      "phone": "0348626820",
+      "roleId": 2,
+      "email": "hiep@gmail.com"
     }
   ],
   "products": [

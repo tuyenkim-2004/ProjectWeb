@@ -34,11 +34,6 @@ function fetchAndDisplayProducts(url, selector) {
 
 // Fetch và hiển thị sản phẩm mới về
 fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1');
-console.log (
-fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1')
-
-)
-
 // Fetch và hiển thị sản phẩm bán chạy
 fetchAndDisplayProducts('http://localhost:3000/best_sellers', '.product_2');
 
