@@ -32,6 +32,8 @@ async function save() {
             body: JSON.stringify(product),
         });
     } else {
+        const maxId = arr.reduce((max, product) => Math.max(max, parseInt(product.id)), 0);
+        product.id = (maxId + 1).toString();
         response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
@@ -87,9 +89,10 @@ function updateDashboard() {
             datasets: [{
                 label: 'Tổng số sản phẩm trong kho',
                 data: stockData,
-                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                backgroundColor: 'rgba(255, 258, 0, 0.5)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1,
+                borderRadius:7,
             }]
         },
         options: {
@@ -143,41 +146,53 @@ function updateDashboard() {
 }
 async function dete(id) {
     if (confirm('Bạn có chắc chắn muốn xóa sản phẩm này không?')) {
-        var response = await fetch(`${apiUrl}/${id}`, {
-            method: 'DELETE', 
-        });
+        try {
+            var response = await fetch(`${apiUrl}/${id}`, {
+                method: 'DELETE', 
+            });
 
-        if (response.ok) {
-            loadProducts(); 
-            alert('Xóa sản phẩm thành công!'); 
-        } else {
-            var errorText = await response.text();
-            alert(`Lỗi khi xóa sản phẩm! Mã lỗi: ${response.status}, Thông báo: ${errorText}`);
+            if (response.ok) {
+                loadProducts(); 
+                alert('Xóa sản phẩm thành công!'); 
+            } else {
+                var errorText = await response.text();
+                alert(`Lỗi khi xóa sản phẩm! Mã lỗi: ${response.status}, Thông báo: ${errorText}`);
+            }
+        } catch (error) {
+            console.error('Có lỗi khi xóa sản phẩm:', error);
+            alert('Có lỗi xảy ra khi xóa sản phẩm!');
         }
     }
 }
-
 async function fix(id) {
-    var response = await fetch(`${apiUrl}/${id}`);
-    var product = await response.json();
+    try {
+        var response = await fetch(`${apiUrl}/${id}`);
+        if (!response.ok) {
+            throw new Error(`Mã lỗi: ${response.status}`);
+        }
+        var product = await response.json();
 
+        document.getElementById('productId').value = product.id; 
+        document.getElementById('prn').value = product.name; 
+        document.getElementById('pre').value = product.price; 
+        document.getElementById('tlq').value = product.stock; 
 
-    document.getElementById('productId').value = product.id; 
-    document.getElementById('prn').value = product.name; 
-    document.getElementById('pre').value = product.price; 
-    document.getElementById('tlq').value = product.total; 
-
-    var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
-    modal.show();
+        var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+        modal.show();
+    } catch (error) {
+        console.error('Có lỗi khi lấy thông tin sản phẩm:', error);
+        alert('Có lỗi xảy ra khi lấy thông tin sản phẩm!');
+    }
 }
 
-
 function resetForm() {
+    document.getElementById('productId').value = ''; // Đặt lại ID
     document.getElementById('prn').value = '';
     document.getElementById('pre').value = '';
     document.getElementById('tlq').value = '';
-    document.getElementById('img').value = '';
-    document.getElementById('mt').value = '';
+    document.getElementById('img').value = ''; // Đây có thể không hoạt động vì không thể đặt giá trị cho input type=file
+    document.getElementById('mt').value = ''; // Kiểm tra ID mt có đúng không
+
     var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
     modal.hide();
 }

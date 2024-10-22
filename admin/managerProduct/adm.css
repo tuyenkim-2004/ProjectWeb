@@ -1,4 +1,8 @@
 
+.main-admin{
+    min-height: 100vh;
+    width: 100%;
+}
 .title_prd{
     text-align: center;
     background-image: url(/projectWeb/images/img_panner/background_3.webp);
@@ -6,7 +10,9 @@
     height: auto;
     padding: 30px;
 }
-
+.fluid{
+    width: 100%;
+}
 .title_prd h2{
     font-weight: bold;
     font-size: 50px;
@@ -34,6 +40,9 @@
 
 .navbar-nav a:hover{
     background-color: antiquewhite;
+    transform: scale(1.05); /* Phóng to khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tăng bóng khi hover */
+    border-color: rgb(238, 168, 168);
 }
 
 .tbl{
@@ -55,7 +64,7 @@
     border-radius: 5px;
 }
 .showfeature{
-    display:none;
+    display: none;
 }
 .create button:hover{
     background-color: antiquewhite;
@@ -177,4 +186,13 @@ table {
 }
 #dashboard {
     margin-bottom: 20px;
+}
+.search {
+    display: flex;
+    justify-content: flex-end; /* Căn chỉnh phần tử bên phải */
+    padding: 10px; /* Thêm khoảng cách */
+    
+}
+.searchProduct {
+    display: flex;
 }
