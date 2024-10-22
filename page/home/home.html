@@ -74,10 +74,10 @@
                         <a class="nav-link active"  id="giohang"  href="http://127.0.0.1:5500/projectWeb/page/shoppingCart/shoppingCart.html">Giỏ hàng</a>
                     </li>
                 </ul>
-                <form class="d-flex search-form">
-                    <i class="bi2 bi-search search-icon"></i>
-                    <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
-                    
+                <form class="d-flex search-form" id="searchForm">
+                    <button id="search-button" type="submit"><i class="bi2 bi-search search-icon"></i></button>
+                    <input class="form-control me-2 search-input" type="search" id="search-input" placeholder="Search" aria-label="Search">
+                    <div id="result"></div>
                     <div class="sub_search">
                         <div class="user-icon">
                             <a href="/projectWeb/page/customer/customer.html">
@@ -144,7 +144,6 @@
             <a href="#" class="category" data-category-id="2">Dầu gội </a>
             <a href="#" class="category" data-category-id="3">Kem dưỡng da</a>
             <a href="#" class="category" data-category-id="4">Sữa tắm </a>
-
         </nav>
         <div id="product-list" class="row"></div>
         <div class="mypham">`

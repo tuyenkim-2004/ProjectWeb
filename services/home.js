@@ -1,4 +1,3 @@
-
 function fetchAndDisplayProducts(url, selector) {
     fetch(url)
         .then(response => response.json())
@@ -9,7 +8,6 @@ function fetchAndDisplayProducts(url, selector) {
                 demo.classList.add('col-3');
                 demo.innerHTML = `
                     <div class="card">
-
                         <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
                             <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
                         </a>
@@ -23,7 +21,6 @@ function fetchAndDisplayProducts(url, selector) {
                         </div>
                     </div>
                 `;
-                
                 productList.appendChild(demo);
             });
         })
@@ -34,17 +31,12 @@ function fetchAndDisplayProducts(url, selector) {
 
 // Fetch và hiển thị sản phẩm mới về
 fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1');
-console.log (
-fetchAndDisplayProducts('http://localhost:3000/new_arrivals', '.product_1')
-
-)
 
 // Fetch và hiển thị sản phẩm bán chạy
 fetchAndDisplayProducts('http://localhost:3000/best_sellers', '.product_2');
 
 // Fetch và hiển thị tất cả sản phẩm
 fetchAndDisplayProducts('http://localhost:3000/products', '.products');
-
 
 document.querySelectorAll('.category').forEach(function(category) {
     category.addEventListener('click', function(event) {
@@ -65,6 +57,33 @@ document.querySelectorAll('.category').forEach(function(category) {
     });
 });
 
+// Lưu trữ sản phẩm vào localStorage
+fetch('http://localhost:3000/products')
+    .then(response => response.json())
+    .then(products => {
+        localStorage.setItem('searchProduct', JSON.stringify(products));
+    })
+    .catch(error => console.error('Error fetching products for localStorage:', error));
+
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của form
+        const searchInput = document.getElementById('search-input').value.toLowerCase();
+        const categories = document.querySelectorAll('.category');
+        let found = false;
+    
+        categories.forEach(category => {
+            if (category.textContent.toLowerCase().includes(searchInput)) {
+                const categoryId = category.dataset.categoryId;
+                window.location.href = `/projectWeb/page/category/categoryPage.html?categoryId=${categoryId}`; // Thay URL phù hợp
+                found = true;
+            }
+        });
+    
+        if (!found) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p class="text-red-600">Lỗi: Không tìm thấy danh mục nào!</p>';
+        }
+    });
 // DO Thanh Binh -- SHOPPING CART
 gioHang()
 window.addEventListener('storage', function () {
