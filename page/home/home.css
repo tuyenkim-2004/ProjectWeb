@@ -278,3 +278,13 @@ h5{
 
 
 
+#logout{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+#logout:hover{
+    color: #ef977d;
+
+}

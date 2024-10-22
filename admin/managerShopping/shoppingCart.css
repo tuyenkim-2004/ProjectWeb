@@ -1,3 +1,6 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 .title_prd{
     text-align: center;
     background-image: url(/projectWeb/images/img_panner/background_3.webp);

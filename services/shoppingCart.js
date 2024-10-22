@@ -19,7 +19,7 @@ function display () {
 
     if (localStorage.length == 0) {
         buy.style.display = 'none'
-        tbody.innerHTML = ` <div class="container" id="none" style=" textDecoration: none; font-size: 20px; color: #a05139"> <b>Giỏ Hàng Trống !!!</b> - <a href = 'http://127.0.0.1:5500/projectWeb/page/home/home.html' style="textDecoration: none;">đi mua hàng</a></div>`
+        tbody.innerHTML = ` <div class="container" id="none" style=" textDecoration: none; font-size: 20px; color: #a05139"> <b>Giỏ Hàng Trống !!!</b> - <a href = '/projectWeb/page/home/home.html' style="textDecoration: none;">đi mua hàng</a></div>`
     }
     else {
         tbody.innerHTML = ""
