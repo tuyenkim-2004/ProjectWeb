@@ -42,3 +42,23 @@ body{
     .info-sub div span {
         color: #666;
     }
+=======
+.info{
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.info *{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.info-sub>*{
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.info-sub>*:hover{
+    cursor: pointer;
+    background-attachment: fixed;
+}
+
