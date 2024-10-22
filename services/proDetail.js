@@ -19,7 +19,7 @@ fetch('http://localhost:3000/products')
                                 <div class="col-lg-6 details-pro">
                                     <h1 class="title-head">${product.name}</h1>
                                     <div class="special-price">
-                                        <span class="price product-price">${product.price} VNĐ</span>
+                                        <span class="price product-price">$${product.price} VNĐ</span>
                                     </div>
                                     <form id="add-to-cart-form" class="wishItem">
                                         <input type="hidden" id="one_variant" name="variantId" value="68561602" />
@@ -81,3 +81,17 @@ fetch('http://localhost:3000/products')
                     console.error('Error fetching product:', error);
                     document.getElementById('product-detail').innerHTML = '<p>Có lỗi xảy ra khi tải sản phẩm.</p>';
                 });
+                //tăng số lượng
+                function increaseQty() {
+                    const qtyInput = document.getElementById('qty-input');
+                    let currentQty = parseInt(qtyInput.value);
+                    currentQty = Math.min(currentQty + 1, 999);
+                    qtyInput.value = currentQty; 
+                }
+                // giảm số lượng
+                function reduceQty() {
+                    const qtyInput = document.getElementById('qty-input');
+                    let currentQty = parseInt(qtyInput.value);
+                    currentQty = Math.max(currentQty - 1, 1); // Tối thiểu là 1
+                    qtyInput.value = currentQty;
+                }
