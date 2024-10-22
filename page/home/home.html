@@ -13,7 +13,6 @@
 <body>
 
 
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="/projectWeb/images/img_panner/logo.webp" alt=""></a>
@@ -23,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                        <a class="nav-link active" aria-current="page" href="/projectWeb/page/home/home.html">Trang chủ</a>
                     </li>
                     <li class="nav-item2 dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,7 +70,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active"  id="giohang"  href="http://127.0.0.1:5500/projectWeb/page/shoppingCart/shoppingCart.html">Giỏ hàng</a>
+                        <a class="nav-link active" href="/projectWeb/page/shoppingCart/shoppingCart.html">Giỏ hàng</a>
                     </li>
                 </ul>
                 <form class="d-flex search-form">
@@ -80,9 +79,14 @@
                     
                     <div class="sub_search">
                         <div class="user-icon">
-                            <a href="/projectWeb/page/customer/customer.html">
+                            <a href="#">
                                 <i class="bi3 bi-person-fill"></i>
                             </a>
+                            <div class="user_menu dropdown-menu">
+                                <a href="/projectWeb/page/login/login.html" class="dropdown-item" id="login-link">Đăng Nhập</a>
+                                <a href="/projectWeb/page/register/register.html" class="dropdown-item" id="register-link">Đăng Ký</a>
+                                <a href="/projectWeb/page/profile/profile.html" class="dropdown-item hidden" id="profile-link">Trang Cá Nhân</a>
+                            </div>
                         </div>
                         
                         <a href="#"><i class="bi bi-handbag-fill"></i></a>
@@ -138,7 +142,6 @@
     <div class="container">
         <div id="banner-3">
             <h2>TẤT CẢ MỸ PHẨM</h2>
-        </div>
         <nav id="navbar-tcmp">
             <a href="#" class="category" data-category-id="1">Sữa rửa mặt </a>
             <a href="#" class="category" data-category-id="2">Dầu gội </a>

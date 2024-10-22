@@ -48,7 +48,8 @@
       "name": "Sữa rửa mặt Hazeline",
       "price": 5000,
       "stock": 30,
-      "image": "blob:http://127.0.0.1:5501/964a40e9-6f41-4e17-af32-d42015f8a0c3",
+      "image": "/projectWeb/images/img_faceWash/img_2.webp"
+,
       "id": 2
     },
     {
