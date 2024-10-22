@@ -235,14 +235,14 @@
     <script src="/projectWeb/services/home.js"></script>
     <script>
         document.getElementById('logout').addEventListener('click', function(e) {
-        e.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
+            e.preventDefault();  // Ngăn chặn hành vi mặc định của liên kết
 
-        // Xóa thông tin người dùng từ localStorage
-        localStorage.removeItem('loggedInUser');
+            // Xóa thông tin người dùng từ localStorage
+            localStorage.removeItem('loggedInUser');
 
-        // Chuyển hướng đến trang home.html
-        window.location.href = '/projectWeb/page/home/home.html';
-    });
+            // Chuyển hướng đến trang home.html
+            window.location.href = '/projectWeb/page/home/home.html';
+        }); 
     </script>
 </body>
 
