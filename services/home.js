@@ -16,7 +16,7 @@ function fetchAndDisplayProducts(url, selector) {
                         <div class="card-body text-center">
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
-                            <a href="#" class="btn btn-primary btn-order">Mua</a>
+                            <a href="/projectWeb/page/payment/payment.html" class="btn btn-primary btn-order">Mua</a>
                             <button class="btn btn-primary btn-shopping" name="${product.id}">
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
                             </button>
@@ -78,7 +78,7 @@ function displayProducts(products) {
 
     if (products.length === 0) {
         productList.innerHTML = '<p>Không có sản phẩm nào trong danh mục này.</p>';
-        return; 
+        return;
     }
 
     products.forEach(product => {
@@ -92,7 +92,7 @@ function displayProducts(products) {
                         <div class="card-body text-center">
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
-                            <a href="#" class="btn btn-primary btn-order">Mua</a>
+                            <a href="/projectWeb/page/payment/payment.html" class="btn btn-primary btn-order">Mua</a>
                             <button class="btn btn-primary btn-shopping" name=${product.id}">
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
                             </button>
