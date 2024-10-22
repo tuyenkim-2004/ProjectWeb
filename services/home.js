@@ -208,4 +208,4 @@ function totalQuantity () {
             total += products[i][productId].quantity
         }
         return total
-}
+    }

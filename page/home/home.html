@@ -5,37 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/projectWeb/page/home/home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 <body>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/projectWeb/images/img_panner/slider_1.webp" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="carousel-item">
-                <img src="/projectWeb/images/img_panner/slider_2.webp" class="d-block w-100" alt="...">
-            </div>
-            <input type="submit" value="Đăng Nhập">
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                        <a class="nav-link active" aria-current="page" href="/projectWeb/page/home/home.html">Trang chủ</a>
                     </li>
                     <li class="nav-item2 dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -91,11 +66,11 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Liên hệ
+                        <a class="nav-link active" href="/projectWeb/page/contact/contact.html" tabindex="-1" aria-disabled="true">Liên hệ
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active"  id="giohang"  href="http://127.0.0.1:5500/projectWeb/page/shoppingCart/shoppingCart.html">Giỏ hàng</a>
+                        <a class="nav-link active" href="/projectWeb/page/shoppingCart/shoppingCart.html">Giỏ hàng</a>
                     </li>
                 </ul>
                 <form class="d-flex search-form">
@@ -108,8 +83,9 @@
                                 <i class="bi3 bi-person-fill"></i>
                             </a>
                             <div class="user_menu dropdown-menu">
-                                <a href="/projectWeb/page/login/login.html" class="dropdown-item">Đăng Nhập</a>
-                                <a href="/projectWeb/page/register/register.html" class="dropdown-item">Đăng Ký</a>
+                                <a href="/projectWeb/page/login/login.html" class="dropdown-item" id="login-link">Đăng Nhập</a>
+                                <a href="/projectWeb/page/register/register.html" class="dropdown-item" id="register-link">Đăng Ký</a>
+                                <a href="/projectWeb/page/profile/profile.html" class="dropdown-item hidden" id="profile-link">Trang Cá Nhân</a>
                             </div>
                         </div>
                         
@@ -121,6 +97,36 @@
             </div>
         </div>
     </nav>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/projectWeb/images/img_panner/slider_1.webp" class="d-block w-100" alt="...">
+                </div>
+        
+                <div class="carousel-item">
+                    <img src="/projectWeb/images/img_panner/slider_2.webp" class="d-block w-100" alt="...">
+                </div>
+                <input type="submit" value="Đăng Nhập">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     <div class="container">
         <div class="banner-1">
             <h2>HÀNG MỚI VỀ </h2>
@@ -137,7 +143,6 @@
     <div class="container">
         <div id="banner-3">
             <h2>TẤT CẢ MỸ PHẨM</h2>
-        </div>
         <nav id="navbar-tcmp">
             <a href="#" class="category" data-category-id="1">Sữa rửa mặt </a>
             <a href="#" class="category" data-category-id="2">Dầu gội </a>
@@ -161,7 +166,7 @@
                 </div>
                 <div class="col-4">
                     <img src="/projectWeb/images/icon/gmail.png" alt="" class="img-icon">
-                    <p>Nhập bản tin làm dẹp cùng chúng tôi </p>
+                    <p>Nhập bản tin làm đẹp cùng chúng tôi </p>
                 </div>
                 <div class="col-4">
                     <input type="text" placeholder="Nhập email của bạn" id="input-footer">
