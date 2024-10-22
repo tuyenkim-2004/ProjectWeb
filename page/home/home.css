@@ -252,3 +252,10 @@ h5{
     color: #a05139;
     font-weight: bolder;
 }
+
+#quantityNum {
+    position: relative;
+    top: -45px;
+    right: -20px;
+    color: #a05139;
+}

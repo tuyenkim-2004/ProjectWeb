@@ -25,9 +25,14 @@ table {
     color: #a05139;
 }
 
+
 #tbody .container {
     display: flex;
     align-items: center;
+}
+tr {
+    border: 1px solid #a05139;
+    border-bottom: 5px solid #a05139;
 }
 
 td img {
@@ -66,7 +71,7 @@ p {
     
 }
 
-.reduce, .increase {
+ .sub,  .add {
     margin: 0px;
     font-size: 25px;
     width: 70px;
@@ -76,17 +81,23 @@ p {
 
 }
 
-.reduce:hover, .increase:hover {
+ .sub:hover,  .add:hover {
     background: #ffb9a4;;
     color: black;
 }
 
-.delete {
+.remove {
     width: 40px;
     font-size: 15px;   
     border: none;
     background: white;
 }
-.delete:hover {
+.remove:hover {
     color: red;
+}
+
+#showPay {
+    color:  gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
