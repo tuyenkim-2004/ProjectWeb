@@ -9,7 +9,7 @@ function fetchAndDisplayProducts(url, selector) {
                 demo.innerHTML = `
                     <div class="card">
 
-                        <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
+                        <a onclick="goToDetail(${product.id})" href="/projectWeb/page/product/productDetail/proDetail.html">
                             <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
                         </a>
                         <div class="card-body text-center">
@@ -102,7 +102,7 @@ setTimeout(()=> {
     for (let i = 0; i < shoppingButtons.length; i++) {
         let shoppingButton = shoppingButtons[i]
         shoppingButton.addEventListener('click', function () {
-            add(shoppingButton.value)
+            add(shoppingButton.value, false)
             giohang()
         })
     }
@@ -151,7 +151,7 @@ function checkProduct (product_id) {
     return false;
 }
 
-function create (product_id, product_name, product_img, product_price) {
+function create (product_id, product_name, product_img, product_price, boolean) {
     if (checkProduct(product_id)) {
         update(product_id, 'add')
     } else {
@@ -168,7 +168,9 @@ function create (product_id, product_name, product_img, product_price) {
         products.push(product)
         setLocalStorage(products)
     }
-    alert('Thêm vào giỏ hàng thành công !!!')
+    if (!boolean) {
+        alert('Thêm vào giỏ hàng thành công !!!')
+    }
 }
 
 function update (product_id, type) {
@@ -192,11 +194,11 @@ function update (product_id, type) {
     }
 }
 
-function add (produc_id) {
+function add (produc_id, boolean) {
     fetch(`http://localhost:3000/products/${produc_id}`)
     .then(response=>response.json())
     .then(product=>{
-        create(product.id, product.name, product.image, product.price)
+        create(product.id, product.name, product.image, product.price, boolean)
     })
 }
 
@@ -209,4 +211,8 @@ function totalQuantity () {
             total += products[i][productId].quantity
         }
         return total
-    }
+}
+
+function goToDetail (idDetail) {
+    localStorage.setItem('idDetail', idDetail)
+}
