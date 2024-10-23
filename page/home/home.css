@@ -131,17 +131,26 @@ body{
     margin-bottom: 40px;
 }
 
-.card{
+.card {
     width: 300px;
+    height: 500px;
     margin-bottom: 30px;
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
-    transform: translateY(-10px); /* Làm nhô lên */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tăng độ bóng */
-     }  
+}
+.card img{
+        width: 300px;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+.card:hover img{
+        transform: translateY(-10px); /* Làm nhô lên */
+
+}
 .card-img-top{
     border: 1px solid rgb(249, 235, 235);
 }

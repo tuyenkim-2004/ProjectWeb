@@ -222,7 +222,7 @@ function displayProducts(products) {
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
                             <a href="#" class="btn btn-primary btn-order">Mua</a>
-                            <button class="btn btn-primary btn-shopping" name=${product.id}">
+                            <button class="btn btn-primary btn-shopping" name=${product.id}>
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
                             </button>
                         </div>
@@ -233,6 +233,7 @@ function displayProducts(products) {
             productList.appendChild(demo);
     });
 }
+    
 // DO Thanh Binh -- SHOPPING CART
 newLocalStorage()
 giohang()

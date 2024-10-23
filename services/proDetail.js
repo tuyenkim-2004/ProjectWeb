@@ -13,7 +13,7 @@ fetch('http://localhost:3000/products')
                         productDetail.innerHTML = `
                             <div class="row">
                                 <div class="col-lg-6 product-images">
-                                    <img src="${product.image}" alt="Sữa rửa mặt Senka">
+                                    <img src="${product.image}">
                                 </div>
 
                                 <div class="col-lg-6 details-pro">
