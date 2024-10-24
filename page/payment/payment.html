@@ -68,7 +68,7 @@
                     </div>                    
                     <div class="button">
                         <button class="order">THANH TOÁN</button>
-                        <button class="shopping">QUAY VỀ GIỎ HÀNG </button>
+                        <button class="shopping" id="back-to-cart">QUAY VỀ GIỎ HÀNG </button>
                     </div>
                 </div>
                 
@@ -77,5 +77,10 @@
     </div>
     <script src="/projectWeb/page/shoppingCart/shoppingCart.html"></script>
     <script src="/projectWeb/services/payment.js"></script>
+    <script>
+        document.getElementById('back-to-cart').addEventListener('click', function() {
+        window.location.href = "/projectWeb/page/shoppingCart/shoppingCart.html"; // Đường dẫn đến trang giỏ hàng
+    });
+    </script>
 </body>
 </html>
