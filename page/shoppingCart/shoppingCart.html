@@ -122,7 +122,6 @@
         <p class="col-2">thành tiền : 0</p>
         <p class="col-2" id="totalPrice">0</p>
     </div>
-
     <div class="container" id="buy">
         <button class="col-6" type="button" id="bt-buy"><b>Thanh Toán</b></button>
       </div>
@@ -200,7 +199,12 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="/projectWeb/services/home.js"></script>
-    <script src="/projectWeb/services/shoppingCart.js"  type="module">
+    <script src="/projectWeb/services/shoppingCart.js"></script>
+    <script>
+        document.getElementById('bt-buy').addEventListener('click', function() {
+            // Thay đổi đường dẫn tới trang thanh toán của bạn
+            window.location.href = '/projectWeb/page/payment/payment.html';
+        });
     </script>
 </body>
   </html>
