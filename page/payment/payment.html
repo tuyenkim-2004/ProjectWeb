@@ -16,47 +16,28 @@
         <div class="row">
             <div class="col-5">
                 <div class="title">
-                    <p>Thông tin nhận hàng </p>
-                    <a href="/projectWeb/page/login/login.html"><i class="bi3 bi-person-fill">Đăng nhập </i></a>
-                    </div>
-                    <label for="email">Enter your email: </label>
-                    <input type="text" placeholder="Enter your email" id="email">                        <label for="name">Enter your fullname: </label>
-                    <input type="text" placeholder="Enter your full name" id="name">
-                    <label for="phone">Enter your email: </label>
-                    <input type="text" placeholder="Enter your phone" id="phone">
-                    <label for="address">Enter your address: </label>
-                    <input type="text" placeholder="Enter your address" id="address">
-                    <div class="form-group">
-                        <label for="note">Ghi chú (tùy chọn)</label>
-                        <textarea id="note" placeholder="Nhập ghi chú ở đây"></textarea>
-                    </div>    
+                    <p>Thông tin nhận hàng</p>
+                    <a href="/projectWeb/page/login/login.html"><i class="bi3 bi-person-fill">Đăng nhập</i></a>
+                </div>
+                <label for="email">Nhập email của bạn: </label>
+                <input type="text" placeholder="Enter your email" id="email"> 
+
+                <label for="phone">Nhập số điện thoại của bạn: </label>
+                <input type="text" placeholder="Nhập số điện thoại của bạn" id="phone">
+
+                <label for="address">Nhập địa chỉ của bạn: </label>
+                <input type="text" placeholder="Nhập địa chỉ của bạn" id="address">
+                
+                <div class="form-group">
+                    <label for="note">Ghi chú (tùy chọn)</label>
+                    <textarea id="note" placeholder="Nhập ghi chú ở đây"></textarea>
+                </div>    
             </div>
 
             <div class="col-6">
-
-                <h2>Đơn hàng (6 sản phẩm)</h2>
+                <p>Đơn hàng</p>
                 <div class="order-summary">
-                    <div class="pr-order">
-                        <div class="pr-img">
-                            <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/399/392/products/6-2.png" alt="">
-                        </div>
-                        <div class="pr-name">Ao thun</div>
-                        <div class="pr-price">10000VND</div>
-                    </div>
-                    <div class="pr-order">
-                        <div class="pr-img">
-                            <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/399/392/products/6-2.png" alt="">
-                        </div>
-                        <div class="pr-name">Ao thun</div>
-                        <div class="pr-price">10000VND</div>
-                    </div>
-                    <div class="pr-order">
-                        <div class="pr-img">
-                            <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/399/392/products/6-2.png" alt="">
-                        </div>
-                        <div class="pr-name">Ao thun</div>
-                        <div class="pr-price">10000VND</div>
-                    </div>
+                    <!-- Bạn có thể thêm nội dung đơn hàng ở đây -->
                 </div>
                 <div class="fee_shipping">
                     <p>Tiền vận chuyển: </p>
@@ -64,17 +45,38 @@
                 </div>
                 <div class="tam_tinh">
                     <p>Tạm tính: </p>
-                    <p>50000 VND</p>
+                    <p></p> <!-- Bạn có thể thêm giá tạm tính ở đây -->
                 </div>
                 <div class="total">
                     <p>Tổng cộng</p>
-                    <p class="total_price">78000 VND</p>
+                    <p class="total_price"></p> <!-- Bạn có thể thêm tổng cộng ở đây -->
                 </div>
-                <div class="payment">
-                    <p>Thanh toan</p>
-                    <p>QR CODE</p>
+                <p>Thanh toán</p>
+                <div class="method-payment">
+                    <div class="method_tien_mat">
+                        <input type="radio" id="tien_mat" name="method" value="Tiền mặt" checked>
+                        <label for="tien_mat">Thanh toán tiền khi nhận hàng</label>
+                    </div>
+                    <div class="method_QR_code">
+                        <div class="payment_qr">
+                            <input type="radio" id="qr_code" name="method" value="QR code">
+                            <label for="qr_code">Mã QR</label>
+                        </div>
+                        <div class="qr-code">
+                            <img id="qr_img" src="https://qrcode-gen.com/images/qrcode-default.png" alt="">
+                        </div>
+                    </div>                    
+                    <div class="button">
+                        <button class="order">THANH TOÁN</button>
+                        <button class="shopping">QUAY VỀ GIỎ HÀNG </button>
+                    </div>
                 </div>
-                <button class="order">Dat hang</button>
+                
+            </div>
+        </div>
+
     </div>
+    <script src="/projectWeb/page/shoppingCart/shoppingCart.html"></script>
+    <script src="/projectWeb/services/payment.js"></script>
 </body>
 </html>
