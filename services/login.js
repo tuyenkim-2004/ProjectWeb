@@ -16,7 +16,7 @@ function getUser(callback) {
             return res.json(); 
         })
         .then(users => {
-            console.log('Fetched users:', users); // Debug thông tin
+            console.log('Fetched users:', users); 
             callback(users);
         }) 
         .catch(error => {

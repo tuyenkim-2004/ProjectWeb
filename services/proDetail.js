@@ -96,3 +96,5 @@ fetch('http://localhost:3000/products')
                     currentQty = Math.max(currentQty - 1, 1); // Tối thiểu là 1
                     qtyInput.value = currentQty;
                 }
+
+                
