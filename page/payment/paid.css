@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffeef8;
+    /* Màu hồng nhạt */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #d5006d;
+    /* Màu hồng đậm */
+}
+
+p {
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d5006d;
+    /* Màu hồng đậm */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c51162;
+    /* Màu hồng tối hơn khi hover */
+}
+
+.icon {
+    font-size: 50px;
+    color: #d5006d;
+}
+
+img {
+    max-width: 100px;
+    margin: 20px 0;
+}
