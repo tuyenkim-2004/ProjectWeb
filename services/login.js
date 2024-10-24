@@ -34,7 +34,7 @@ function handleLogin(users) {
         if (user.email === email && user.password === password) {
             userFound = true;
             localStorage.setItem('loggedInUser', JSON.stringify(user)); // Đánh dấu là đã tìm thấy người dùng
-            window.location.href = '/projectWeb/page/home/home-login.html';
+            window.location.href = '/projectWeb/page/home/home.html';
 
         }
     });
