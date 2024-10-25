@@ -19,22 +19,6 @@
       "email": "tuyenkimnguyen107@gmail.com"
     },
     {
-      "id": "1728914099294",
-      "username": "123",
-      "password": "123",
-      "phone": "123",
-      "roleId": 2,
-      "email": "123@gmail.com"
-    },
-    {
-      "id": "1728918481966",
-      "username": "nguyendat",
-      "password": "12345678",
-      "phone": "030805000",
-      "roleId": 2,
-      "email": "dat@123.com"
-    },
-    {
       "id": "1729067753798",
       "username": "Nguyễn Thị Kim Tuyền",
       "password": "123456789",
@@ -43,67 +27,15 @@
       "email": "tuyen.nguyen25@student.passerellesnumeriques.org"
     },
     {
-      "id": 1729619668931,
-      "username": "Đạt Nguyễn Văn",
-      "password": "123",
+      "id": 1729869040300,
+      "username": "dat",
+      "password": "dat",
       "phone": "0856523557",
       "roleId": 2,
       "email": "dat656473@gmail.com"
     }
   ],
   "products": [
-    {
-      "name": "Sữa rửa mặt Hazeline",
-      "price": 5000,
-      "stock": 30,
-      "image": "/projectWeb/images/img_faceWash/img_2.webp",
-      "id": "2"
-    },
-    {
-      "id": "3",
-      "name": "Sữa rửa mặt Hatomuzi",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 95000,
-      "categoryId": 1,
-      "image": "/projectWeb/images/img_faceWash/img_3.webp",
-      "stock": 20
-    },
-    {
-      "id": "4",
-      "name": "Sữa rửa mặt Rice milk",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 75000,
-      "categoryId": 1,
-      "image": "/projectWeb/images/img_faceWash/img_4.webp",
-      "stock": 20
-    },
-    {
-      "id": "5",
-      "name": "Dầu gội Clear",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 200000,
-      "categoryId": 2,
-      "image": "/projectWeb/images/img_shampoo/shampoo_1.webp",
-      "stock": 20
-    },
-    {
-      "id": "6",
-      "name": "Dầu gội NeBlack Tone",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 150000,
-      "categoryId": 2,
-      "image": "/projectWeb/images/img_shampoo/shapoo_2.webp",
-      "stock": 20
-    },
-    {
-      "id": "7",
-      "name": "Dầu gội Rejoie",
-      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
-      "price": 75000,
-      "categoryId": 2,
-      "image": "/projectWeb/images/img_shampoo/shampoo_3.webp",
-      "stock": 20
-    },
     {
       "id": "8",
       "name": "Dầu gội Dercos",
@@ -167,7 +99,7 @@
       "price": 230000,
       "categoryId": 3,
       "image": "/projectWeb/images/img_skinCareScream/img7.webp",
-      "stock": 20
+      "stock": 15
     },
     {
       "id": "16",
