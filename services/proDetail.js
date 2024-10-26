@@ -1,23 +1,45 @@
+// Lấy ID sản phẩm từ localStorage
 var idDetail = JSON.parse(localStorage.getItem('idDetail'));
 
+// Fetch thông tin sản phẩm từ API
 fetch(`http://localhost:3000/products/${idDetail}`)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(product => {
         const productDetail = document.querySelector('.container_details');
         productDetail.innerHTML = `
             <div class="row">
                 <div class="col-lg-6 product-images">
-                    <img src="${product.image}" alt="Sữa rửa mặt Senka">
+                    <img src="${product.image}" alt="${product.name}">
                 </div>
                 <div class="col-lg-6 details-pro">
                     <h1 class="title-head">${product.name}</h1>
                     <div class="special-price">
-                        <span class="price product-price">${product.price} VNĐ</span>
+                        <span class="price product-price">${product.price.toLocaleString('vi-VN')} VNĐ</span>
                     </div>
                     <form id="add-to-cart-form" class="wishItem">
-                        <input type="hidden" id="one_variant" name="variantId" value="68561602" />
+                        <input type="hidden" id="one_variant" name="variantId" value="${product.id}" />
                         <div class="service_product">
-                            <!-- Các dịch vụ -->
+                            <div class="info_servicea">
+                                <img class="img-responsive" src="/projectWeb/images/icon/image_service_1_product.png" alt="">
+                                <p><a href="#" title="Giao hàng toàn quốc">Giao hàng toàn quốc</a></p>
+                            </div>
+                            <div class="info_servicea">
+                                <img class="img-responsive" src="/projectWeb/images/icon/image_service_2_product.png" alt="">
+                                <p><a href="#" title="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</a></p>
+                            </div>
+                            <div class="info_servicea">
+                                <img class="img-responsive" src="/projectWeb/images/icon/image_service_3_product.png" alt="">
+                                <p><a href="#" title="Cam kết đổi/trả hàng miễn phí">Cam kết đổi/trả hàng miễn phí</a></p>
+                            </div>
+                            <div class="info_servicea">
+                                <img class="img-responsive" src="/projectWeb/images/icon/image_service_4_product.png" alt="">
+                                <p><a href="#" title="Hàng chính hãng/Bảo hành 10 năm">Hàng chính hãng/Bảo hành 10 năm</a></p>
+                            </div>
                         </div>
                         <div class="inventory_quantity">
                             <span class="a-stock">Còn hàng</span>
@@ -39,13 +61,19 @@ fetch(`http://localhost:3000/products/${idDetail}`)
                 </div>
             </div>
         `;
+    })
+    .catch(error => {
+        console.error('Có lỗi xảy ra:', error);
     });
 
+// Hàm tăng số lượng
 function increaseQty() {
     var qtyInput = document.getElementById('qty-input');
     qtyInput.value = parseInt(qtyInput.value) + 1; // Tăng số lượng
 }
 
+//```javascript
+// Hàm giảm số lượng
 function reduceQty() {
     var qtyInput = document.getElementById('qty-input');
     if (qtyInput.value > 1) {
@@ -53,22 +81,25 @@ function reduceQty() {
     }
 }
 
+// Hàm thêm vào giỏ hàng
 function addToCart() {
     var qtyInput = document.getElementById('qty-input').value;
-    let alert = false;    
+    let alertAdded = false;    
     for (let i = 0; i < qtyInput; i++) {
-        add(idDetail, alert); // Giả sử hàm add thêm sản phẩm vào giỏ hàng
-        alert = true; // Đánh dấu đã thêm sản phẩm
+        add(idDetail, alertAdded); // Giả sử hàm add sản phẩm vào giỏ hàng
+        alertAdded = true; // Đánh dấu đã thêm sản phẩm
     }
+    alert('Sản phẩm đã được thêm vào giỏ hàng!');
 }
 
+// Hàm mua ngay
 function buyNow() {
     var qtyInput = document.getElementById('qty-input').value;
-    let alert = false;
+    let alertAdded = false;
 
     for (let i = 0; i < qtyInput; i++) {
-        add(idDetail, alert); // Thêm sản phẩm vào giỏ hàng
-        alert = true; // Đánh dấu đã thêm sản phẩm
+        add(idDetail, alertAdded); // Thêm sản phẩm vào giỏ hàng
+        alertAdded = true; // Đánh dấu đã thêm sản phẩm
     }
 
     // Chuyển đến trang thanh toán
@@ -77,8 +108,10 @@ function buyNow() {
     }, 200);
 }
 
-window.addEventListener('click', function () {
-    // Mã này có thể được bỏ qua nếu không cần thiết
-});
+// Hàm thêm sản phẩm vào giỏ hàng (giả định)
+function add(productId, alertAdded) {
+    console.log(`Thêm sản phẩm ID: ${productId} vào giỏ hàng`);
+}
 
+// Gọi hàm giohang mỗi 500ms (giả định)
 setInterval(() => { giohang(); }, 500);

@@ -1,131 +1,151 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
-.main-admin{
+
+.main-admin {
     min-height: 100vh;
     width: 100%;
 }
-.title_prd{
+
+.title_prd {
     text-align: center;
     background-image: url(/projectWeb/images/img_panner/background_3.webp);
     width: 100%;
     height: auto;
     padding: 30px;
 }
-.fluid{
+
+.fluid {
     width: 100%;
 }
-.title_prd h2{
+
+.title_prd h2 {
     font-weight: bold;
     font-size: 50px;
 }
 
-.navbar-nav{
+.navbar-nav {
     font-size: 18px;
-    gap: 500px; 
+    gap: 500px;
 }
 
-.navbar-nav a{
+.navbar-nav a {
     height: 50px;
     background-color: rgb(238, 168, 168);
     border: 2px solid rgb(238, 168, 168);
     border-radius: 5px;
     font-weight: bold;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 0 20px; 
-    cursor: pointer; 
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển tiếp */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    /* Hiệu ứng chuyển tiếp */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-nav a:hover{
+.navbar-nav a:hover {
     background-color: antiquewhite;
-    transform: scale(1.05); /* Phóng to khi hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tăng bóng khi hover */
+    transform: scale(1.05);
+    /* Phóng to khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Tăng bóng khi hover */
     border-color: rgb(238, 168, 168);
 }
 
-.tbl{
+.tbl {
     padding-top: 30px;
     text-align: center;
 }
 
-.create{
+.create {
     padding-top: 0px;
     text-align: right;
-    padding-right: 20px;                               
-} 
+    padding-right: 20px;
+}
 
-.create button{
+.create button {
     height: 50px;
     font-weight: bold;
     background-color: rgb(236, 188, 125);
     border: 2px solid rgb(236, 188, 125);
     border-radius: 5px;
 }
-.showfeature{
+
+.showfeature {
     display: none;
 }
-.create button:hover{
+
+.create button:hover {
     background-color: antiquewhite;
-    transform: scale(1.05); /* Phóng to khi hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tăng bóng khi hover */
+    transform: scale(1.05);
+    /* Phóng to khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Tăng bóng khi hover */
     border-color: antiquewhite;
 }
 
-.table thead th{
-    background-color: rgb(225, 140, 30); /* Màu nền cho phần tiêu đề bảng */
+.table thead th {
+    background-color: rgb(225, 140, 30);
+    /* Màu nền cho phần tiêu đề bảng */
 }
 
-.form-box h2{
+.form-box h2 {
     text-align: center;
 }
 
-.modal-content h2{
+.modal-content h2 {
     text-align: center;
     padding: 20px;
-    background-image: url(/projectWeb/images/img_panner/background_1.webp); /* Đường dẫn tương đối */
+    background-image: url(/projectWeb/images/img_panner/background_1.webp);
+    /* Đường dẫn tương đối */
 }
 
-.input-group-text{
+.input-group-text {
     width: 30%;
 }
 
-.showfeature, .create button {
+.showfeature,
+.create button {
     height: 50px;
     font-weight: bold;
     background-color: rgb(236, 188, 125);
     border: 2px solid rgb(236, 188, 125);
     border-radius: 5px;
-    color: #000000; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 0 20px; 
-    cursor: pointer; 
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển tiếp */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng */
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    /* Hiệu ứng chuyển tiếp */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Hiệu ứng bóng */
 }
 
-.showfeature:hover, .create button:hover {
+.showfeature:hover,
+.create button:hover {
     background-color: antiquewhite;
-    transform: scale(1.05); /* Phóng to khi hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tăng bóng khi hover */
-    border-color: #d4a05a; /* Thay đổi màu viền khi hover */
+    transform: scale(1.05);
+    /* Phóng to khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Tăng bóng khi hover */
+    border-color: #d4a05a;
+    /* Thay đổi màu viền khi hover */
 }
 
-.show{
+.show {
     text-align: left;
     padding-left: 20px;
 }
 
-.feature{
-    display: none; 
+.feature {
+    display: none;
 }
 
-.product_body td{
+.product_body td {
     font-weight: bold;
     text-align: center;
     border: 1px solid black;
@@ -137,64 +157,87 @@ body{
     background-color: rgb(236, 188, 125);
     border: 2px solid rgb(236, 188, 125);
     color: #000000;
-    padding: 10px 15px; 
+    padding: 10px 15px;
     border-radius: 5px;
     margin: 10px;
-    cursor: pointer; 
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng cho nút */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Hiệu ứng bóng cho nút */
 }
 
 .dele:hover {
     background-color: antiquewhite;
-    transform: scale(1.05); /* Phóng to khi hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tăng bóng khi hover */
-    border: 2px solid #d4a05a; /* Thay đổi màu sắc viền khi hover */
+    transform: scale(1.05);
+    /* Phóng to khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Tăng bóng khi hover */
+    border: 2px solid #d4a05a;
+    /* Thay đổi màu sắc viền khi hover */
 }
-.control{
+
+.control {
     display: flex;
     justify-content: space-between;
 }
+
 table {
     width: 100%;
 }
+
 @media (max-width: 768px) {
-    table th, table td {
+
+    table th,
+    table td {
         font-size: 14px;
     }
-    .navbar-nav .nav-link{
+
+    .navbar-nav .nav-link {
 
         text-align: center;
     }
 
-    th:nth-child(4), td:nth-child(4), 
-    th:nth-child(5), td:nth-child(5), 
-    th:nth-child(6), td:nth-child(6) { 
+    th:nth-child(4),
+    td:nth-child(4),
+    th:nth-child(5),
+    td:nth-child(5),
+    th:nth-child(6),
+    td:nth-child(6) {
         display: none;
     }
 }
 
 @media (max-width: 576px) {
-    table th, table td {
+
+    table th,
+    table td {
         font-size: 12px;
     }
-    .navbar-nav .nav-link{
+
+    .navbar-nav .nav-link {
 
         text-align: center;
     }
-    th:nth-child(8), td:nth-child(8) {
+
+    th:nth-child(8),
+    td:nth-child(8) {
         display: none;
     }
 }
+
 #dashboard {
     margin-bottom: 20px;
 }
+
 .search {
     display: flex;
-    justify-content: flex-end; /* Căn chỉnh phần tử bên phải */
-    padding: 10px; /* Thêm khoảng cách */
-    
+    justify-content: flex-end;
+    /* Căn chỉnh phần tử bên phải */
+    padding: 10px;
+    /* Thêm khoảng cách */
+
 }
+
 .searchProduct {
     display: flex;
 }
