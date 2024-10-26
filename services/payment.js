@@ -77,13 +77,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sự kiện click cho nút "THANH TOÁN"
     const orderButton = document.querySelector('.order');
     orderButton.addEventListener('click', async function() {
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+        const note = document.getElementById('note').value;
+
+        // Kiểm tra các trường nhập liệu
+        if (!email || !phone || !address || !note) {
+            alert('Vui lòng điền đầy đủ thông tin địa chỉ và ghi chú.');
+            return; // Ngăn không cho gửi đơn hàng
+        }
+
         const paymentMethod = document.querySelector('input[name="method"]:checked').value;
+        const orderID = Date.now();
 
         const orderDetails = {
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            address: document.getElementById('address').value,
-            note: document.getElementById('note').value,
+            orderID: orderID,
+            email: email,
+            phone: phone,
+            address: address,
+            note: note,
             products: products.map(product => {
                 const productId = Object.keys(product)[0];
                 const productData = product[productId];

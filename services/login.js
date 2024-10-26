@@ -34,7 +34,13 @@ function handleLogin(users) {
         if (user.email === email && user.password === password) {
             userFound = true;
             localStorage.setItem('loggedInUser', JSON.stringify(user)); // Đánh dấu là đã tìm thấy người dùng
-            window.location.href = '/projectWeb/page/home/home.html';
+            // window.location.href = '/projectWeb/page/home/home.html';
+            window.location.href ='/projectWeb/page/history_order/h_order.html';
+            if (user.roleId === 1) { // Giả sử roleId 1 là admin
+                window.location.href = '/projectWeb/admin/managerCustomer/ctm.html'; // Đường dẫn trang admin
+            } else {
+                window.location.href = '/projectWeb/page/history_order/h_order.html'; // Đường dẫn trang người dùng
+            }
 
         }
     });
