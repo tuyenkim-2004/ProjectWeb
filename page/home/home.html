@@ -72,7 +72,7 @@
                                         Kem dưỡng da
                                     </a>
                                     <ul class=" dropdown-menu" aria-labelledby="navbarDropdown2">
-                                        <li><a class="dropdown-item" href="#">V7 Toning Light</a></li>
+                                        <li><a class="dropdown-item" href="proDetail.html?productId=9">V7 Toning Light</a></li>
                                         <li><a class="dropdown-item" href="#">Bioaqua</a></li>
                                         <li><a class="dropdown-item" href="#">Collagen</a></li>
                                     </ul>
@@ -263,23 +263,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="/projectWeb/services/home.js"></script>
-
-    <script>
-        let isLoggedIn = localStorage.getItem('loggedInUser') !== null; 
-
-        if (isLoggedIn) {
-            document.getElementById('logged-in-header').classList.remove('d-none');
-            document.getElementById('logged-out-header').classList.add('d-none');
-        } else {
-            document.getElementById('logged-out-header').classList.remove('d-none');
-            document.getElementById('logged-in-header').classList.add('d-none');
-        }
-
-        // Đăng xuất
-        document.getElementById('logout')?.addEventListener('click', () => {
-            localStorage.removeItem('loggedInUser'); // Xóa thông tin người dùng
-            window.location.reload(); 
-        });
-    </script>
+    <script src="/projectWeb/services/header.js"></script>
+    
 </body>
 </html>
