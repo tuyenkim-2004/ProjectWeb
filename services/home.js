@@ -152,12 +152,15 @@ function fetchAndDisplayProducts(url, selector) {
                 demo.innerHTML = `
                     <div class="card">
                         <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
+
+
+                        <a onclick="goToDetail(${product.id})" href="/projectWeb/page/product/productDetail/proDetail.html">
                             <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
                         </a>
                         <div class="card-body text-center">
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
-                            <a href="#" class="btn btn-primary btn-order">Mua</a>
+                            <a href="/projectWeb/page/payment/payment.html" class="btn btn-primary btn-order">Mua</a>
                             <button class="btn btn-primary btn-shopping" name = "create" value ="${product.id}">
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
                             </button>
@@ -223,6 +226,7 @@ function displayProducts(products) {
                             <p class="card-text">${product.price} VNĐ</p>
                             <a href="#" class="btn btn-primary btn-order">Mua</a>
                             <button class="btn btn-primary btn-shopping" name=${product.id}>
+                            <a href="/projectWeb/page/payment/payment.html" class="btn btn-primary btn-order">Mua</a>
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
                             </button>
                         </div>
@@ -246,7 +250,7 @@ setTimeout(()=> {
     for (let i = 0; i < shoppingButtons.length; i++) {
         let shoppingButton = shoppingButtons[i]
         shoppingButton.addEventListener('click', function () {
-            add(shoppingButton.value)
+            add(shoppingButton.value, false)
             giohang()
         })
     }
@@ -309,7 +313,7 @@ function checkProduct (product_id) {
     return false;
 }
 
-function create (product_id, product_name, product_img, product_price) {
+function create (product_id, product_name, product_img, product_price, boolean) {
     if (checkProduct(product_id)) {
         update(product_id, 'add')
     } else {
@@ -326,7 +330,9 @@ function create (product_id, product_name, product_img, product_price) {
         products.push(product)
         setLocalStorage(products)
     }
-    alert('Thêm vào giỏ hàng thành công !!!')
+    if (!boolean) {
+        alert('Thêm vào giỏ hàng thành công !!!')
+    }
 }
 
 function update (product_id, type) {
@@ -350,11 +356,11 @@ function update (product_id, type) {
     }
 }
 
-function add (produc_id) {
+function add (produc_id, boolean) {
     fetch(`http://localhost:3000/products/${produc_id}`)
     .then(response=>response.json())
     .then(product=>{
-        create(product.id, product.name, product.image, product.price)
+        create(product.id, product.name, product.image, product.price, boolean)
     })
 }
 
@@ -368,4 +374,9 @@ function totalQuantity () {
         }
         return total
     }
+
+
+function goToDetail (idDetail) {
+    localStorage.setItem('idDetail', idDetail)
+}
 
