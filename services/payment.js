@@ -48,45 +48,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const subtotal = totalAmount;
     const total = subtotal + shippingFee;
 
-<<<<<<< HEAD
-    document.querySelector('.fee_shipping span').innerText = `${shippingFee} VND`;
-    document.querySelector('.tam_tinh span').innerText = `${subtotal} VND`;
-    document.querySelector('.total_price span').innerText = `${total} VND`;
-
-    // Thêm nút "THANH TOÁN"
-    const orderButton = document.querySelector('.order');
-
-    orderButton.addEventListener('click', async function() {
-        // Lấy thông tin từ các trường nhập liệu
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const address = document.getElementById('address').value;
-        const note = document.getElementById('note').value;
-        const paymentMethod = document.querySelector('input[name="method"]:checked').value;
-
-        // Kiểm tra nếu tất cả thông tin cần thiết đã được nhập
-        if (!email || !phone || !address) {
-            alert('Vui lòng nhập đầy đủ thông tin!');
-            return;
-        }
-
-        const orderDetails = {
-            email: email,
-            phone: phone,
-            address: address,
-            note: note,
-=======
     // Hiển thị tạm tính và tổng cộng
-    document.querySelector('.price_tamtinh').innerText = `${subtotal} VND`; // Hiển thị tạm tính
-    document.querySelector('.total_price').innerText = `${total} VND`; // Hiển thị tổng cộng
+    document.querySelector('.price_tamtinh').innerText = `${subtotal} VND`;
+    document.querySelector('.total_price').innerText = `${total} VND`;
 
     // Tạo mã QR cho tổng số tiền
     const qrImage = document.getElementById('qr_img');
     const QR = `https://img.vietqr.io/image/BIDV-5811623308-qr_only.png?amount=${total}&addInfo=ThanhToan`;
     qrImage.src = QR;
 
-    document.getElementById('qr_code').addEventListener('change', function() {
-        qrImage.style.display = this.checked ? 'block' : 'none';
+    // Xử lý sự kiện cho các nút radio phương thức thanh toán
+    const paymentMethods = document.querySelectorAll('input[name="method"]');
+    paymentMethods.forEach(method => {
+        method.addEventListener('change', function() {
+            if (this.value === 'Tiền mặt') {
+                qrImage.style.display = 'none'; // Ẩn mã QR khi chọn thanh toán tiền mặt
+            } else if (this.value === 'QR code') {
+                qrImage.style.display = 'block'; // Hiện mã QR khi chọn thanh toán bằng mã QR
+            }
+        });
     });
 
     // Sự kiện click cho nút "THANH TOÁN"
@@ -99,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: document.getElementById('phone').value,
             address: document.getElementById('address').value,
             note: document.getElementById('note').value,
->>>>>>> 9141d0dcbbedac6e868d83471eb75ca2cee32ffd
             products: products.map(product => {
                 const productId = Object.keys(product)[0];
                 const productData = product[productId];
@@ -118,11 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         try {
-<<<<<<< HEAD
-            const response = await fetch('/api/orders', {
-=======
-            const response = await fetch(' http://localhost:3000/orders', {
->>>>>>> 9141d0dcbbedac6e868d83471eb75ca2cee32ffd
+            const response = await fetch('http://localhost:3000/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -131,14 +106,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             if (response.ok) {
-<<<<<<< HEAD
-                alert('Đơn hàng đã được lưu thành công!');
-=======
                 // alert('Đơn hàng đã được lưu thành công!');
-                // Xóa sản phẩm trong giỏ hàng
                 localStorage.removeItem('products');
->>>>>>> 9141d0dcbbedac6e868d83471eb75ca2cee32ffd
-                window.location.href = '/projectWeb/page/payment-success/payment-success.html'; // Chuyển đến trang thanh toán thành công
+                window.location.href = '/projectWeb/page/payment-success/payment-success.html';
             } else {
                 alert('Đã xảy ra lỗi khi lưu đơn hàng.');
             }
@@ -146,5 +116,10 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error:', error);
             alert('Đã xảy ra lỗi khi gửi yêu cầu.');
         }
+    });
+
+    // Xử lý sự kiện cho nút "QUAY VỀ GIỎ HÀNG"
+    document.getElementById('back-to-cart').addEventListener('click', function() {
+        window.location.href = '/projectWeb/page/shoppingCart/shoppingCart.html'; // Đường dẫn đến trang giỏ hàng
     });
 });
