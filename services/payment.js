@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const orderSummary = document.querySelector('.order-summary');
     const shippingFee = 40000;
+    const qrImage = document.getElementById('qr_img');
 
     async function checkLoginStatus() {
         const user = JSON.parse(localStorage.getItem('loggedInUser'));
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Kiểm tra trạng thái đăng nhập
     checkLoginStatus();
 
     const products = JSON.parse(localStorage.getItem('products')) || [];
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let totalAmount = 0;
 
+    // Hiển thị sản phẩm trong giỏ hàng
     products.forEach(product => {
         const productId = Object.keys(product)[0];
         const productData = product[productId];
@@ -53,9 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.total_price').innerText = `${total} VND`;
 
     // Tạo mã QR cho tổng số tiền
-    const qrImage = document.getElementById('qr_img');
     const QR = `https://img.vietqr.io/image/BIDV-5811623308-qr_only.png?amount=${total}&addInfo=ThanhToan`;
     qrImage.src = QR;
+
+    // Ẩn mã QR mặc định
+    qrImage.style.display = 'none';
 
     // Xử lý sự kiện cho các nút radio phương thức thanh toán
     const paymentMethods = document.querySelectorAll('input[name="method"]');
@@ -106,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             if (response.ok) {
-                // alert('Đơn hàng đã được lưu thành công!');
                 localStorage.removeItem('products');
                 window.location.href = '/projectWeb/page/payment-success/payment-success.html';
             } else {

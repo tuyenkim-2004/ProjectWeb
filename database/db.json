@@ -660,6 +660,26 @@
       "paymentMethod": "QR code",
       "orderDate": "2024-10-26T09:17:25.711Z",
       "id": 12
+    },
+    {
+      "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
+      "phone": "0348626820",
+      "address": "as",
+      "note": "dfsf",
+      "products": [
+        {
+          "productId": "2",
+          "name": "Sữa rửa mặt Hazeline",
+          "price": 55000,
+          "quantity": 2
+        }
+      ],
+      "subtotal": 110000,
+      "shippingFee": 40000,
+      "total": 150000,
+      "paymentMethod": "Tiền mặt",
+      "orderDate": "2024-10-26T09:24:44.858Z",
+      "id": 13
     }
   ],
   "carts": [
