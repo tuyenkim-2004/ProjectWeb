@@ -41,6 +41,20 @@ fetch(`http://localhost:3000/products/${idDetail}`)
         `;
     });
 
+//                 function increaseQty() {
+//                     const qtyInput = document.getElementById('qty-input');
+//                     let currentQty = parseInt(qtyInput.value);
+//                     currentQty = Math.min(currentQty + 1, 999);
+//                     qtyInput.value = currentQty; 
+//                 }
+//                 // giảm số lượng
+//                 function reduceQty() {
+//                     const qtyInput = document.getElementById('qty-input');
+//                     let currentQty = parseInt(qtyInput.value);
+//                     currentQty = Math.max(currentQty - 1, 1); // Tối thiểu là 1
+//                     qtyInput.value = currentQty;
+//                 }
+// =======
 function increaseQty() {
     var qtyInput = document.getElementById('qty-input');
     qtyInput.value = parseInt(qtyInput.value) + 1; // Tăng số lượng
