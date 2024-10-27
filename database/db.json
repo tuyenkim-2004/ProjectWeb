@@ -516,6 +516,39 @@
       "total": 150000,
       "paymentMethod": "Tiền mặt",
       "orderDate": "2024-10-26T14:29:48.377Z"
+    },
+    {
+      "id": "f45d",
+      "orderID": 1729958782612,
+      "email": "hiep@gmail.com",
+      "phone": "0862392271",
+      "address": "Quảng Trị",
+      "note": "hàng đẹp ",
+      "products": [
+        {
+          "productId": "2",
+          "name": "Sữa rửa mặt Hazeline",
+          "price": 55000,
+          "quantity": 1
+        },
+        {
+          "productId": "11",
+          "name": "Kem dưỡng da Collagen",
+          "price": 230000,
+          "quantity": 1
+        },
+        {
+          "productId": "12",
+          "name": "Kem dưỡng da Laneige",
+          "price": 80000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 365000,
+      "shippingFee": 40000,
+      "total": 405000,
+      "paymentMethod": "Tiền mặt",
+      "orderDate": "2024-10-26T16:06:22.612Z"
     }
   ],
   "carts": [
