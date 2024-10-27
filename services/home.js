@@ -1,3 +1,5 @@
+
+
 function fetchAndDisplayProducts(url, selector) {
     fetch(url)
         .then(response => response.json())
@@ -8,21 +10,30 @@ function fetchAndDisplayProducts(url, selector) {
                 demo.classList.add('col-3');
                 demo.innerHTML = `
                     <div class="card">
-
-                        <a onclick="goToDetail(${product.id})" href="/projectWeb/page/product/productDetail/proDetail.html">
+                        <a onclick="goToDetail(${product.id})" href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
                             <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
                         </a>
                         <div class="card-body text-center">
                             <h4 class="card-title">${product.name}</h4>
                             <p class="card-text">${product.price} VNĐ</p>
-                            <a href="/projectWeb/page/payment/payment.html" class="btn btn-primary btn-order">Mua</a>
-                            <button class="btn btn-primary btn-shopping" name = "create" value ="${product.id}">
+                            <a href="#" class="btn btn-primary btn-order" data-id="${product.id}">Mua</a>
+                            <button class="btn btn-primary btn-shopping" name="create" value="${product.id}">
                                 <i class="bi bi-handbag-fill icon-shopping"></i>
                             </button>
                         </div>
                     </div>
                 `;
-            productList.appendChild(demo);
+                productList.appendChild(demo);
+            });
+
+            // Add event listeners for the "Mua" buttons
+            const buyButtons = productList.querySelectorAll('.btn-order');
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default anchor behavior
+                    const productId = this.getAttribute('data-id');
+                    add(productId, true); // Add to cart and redirect
+                });
             });
         })
         .catch(error => {
@@ -68,151 +79,158 @@ function displayProducts(products) {
     }
 
     products.forEach(product => {
-            const demo = document.createElement('div'); 
-            demo.classList.add('col-3');
-            demo.innerHTML = `
-                <div class="card">
-                        <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
-                            <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
-                        </a>
-                        <div class="card-body text-center">
-                            <h4 class="card-title">${product.name}</h4>
-                            <p class="card-text">${product.price} VNĐ</p>
-                            <a href="/projectWeb/page/payment/payment.html" class="btn btn-primary btn-order">Mua</a>
-                            <button class="btn btn-primary btn-shopping" name=${product.id}">
-                                <i class="bi bi-handbag-fill icon-shopping"></i>
-                            </button>
-                        </div>
-                    </div>
-            `;
+        const demo = document.createElement('div'); 
+        demo.classList.add('col-3');
+        demo.innerHTML = `
+            <div class="card">
+                <a href="/projectWeb/page/product/productDetail/proDetail.html?id=${product.id}">
+                    <img class="card-img-top" src="${product.image}" alt="${product.name} - Hình ảnh sản phẩm" style="width:100%">
+                </a>
+                <div class="card-body text-center">
+                    <h4 class="card-title">${product.name}</h4>
+                    <p class="card-text">${product.price} VNĐ</p>
+                    <a href="#" class="btn btn-primary btn-order" data-id="${product.id}">Mua</a>
+                    <button class="btn btn-primary btn-shopping" name=${product.id}">
+                        <i class="bi bi-handbag-fill icon-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        `;
 
-            // Thêm phần tử demo vào productList
-            productList.appendChild(demo);
+        // Thêm phần tử demo vào productList
+        productList.appendChild(demo);
+
+        // Add event listener for the "Mua" button in the filtered products
+        demo.querySelector('.btn-order').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const productId = product.id;
+            add(productId, true); // Add to cart and redirect
+        });
     });
 }
+
 // DO Thanh Binh -- SHOPPING CART
-newLocalStorage()
-giohang()
+newLocalStorage();
+giohang();
 window.addEventListener('storage', function () {
-    giohang()
-})
+    giohang();
+});
 
-setTimeout(()=> {
-    let shoppingButtons = document.getElementsByClassName('btn-shopping')
+setTimeout(() => {
+    let shoppingButtons = document.getElementsByClassName('btn-shopping');
     for (let i = 0; i < shoppingButtons.length; i++) {
-        let shoppingButton = shoppingButtons[i]
+        let shoppingButton = shoppingButtons[i];
         shoppingButton.addEventListener('click', function () {
-            add(shoppingButton.value, false)
-            giohang()
-        })
+            add(shoppingButton.value, false);
+            giohang();
+        });
     }
-    newLocalStorage()
-}, 100)
+    newLocalStorage();
+}, 100);
 
-
-function newLocalStorage () {
-    setTimeout(()=>{
-
-        let check = localStorage.getItem('products')
-        if((check == null  || check == undefined)) {
-            let products = []
-            localStorage.setItem('products', JSON.stringify(products))
+function newLocalStorage() {
+    setTimeout(() => {
+        let check = localStorage.getItem('products');
+        if (check == null || check == undefined) {
+            let products = [];
+            localStorage.setItem('products', JSON.stringify(products));
         }
-    },50)
+    }, 50);
 }
 
-function giohang () {
-    setTimeout(()=> {
-        const giohang = document.getElementById('quantityNum')
-        let total = totalQuantity()
-        total === 0? giohang.innerText = ``:  giohang.innerText = total
-    },50)
-
+function giohang() {
+    setTimeout(() => {
+        const giohang = document.getElementById('quantityNum');
+        let total = totalQuantity();
+        total === 0 ? giohang.innerText = `` : giohang.innerText = total;
+    }, 50);
 }
 
-function setLocalStorage (productsData) {
-    localStorage.setItem('products', JSON.stringify(productsData))
+function setLocalStorage(productsData) {
+    localStorage.setItem('products', JSON.stringify(productsData));
 }
 
-function getLocalStorage () {
-    let productsData = localStorage.getItem('products')
-    return (JSON.parse(productsData))
+function getLocalStorage() {
+    let productsData = localStorage.getItem('products');
+    return (JSON.parse(productsData));
 }
 
-function checkProduct (product_id) {
+function checkProduct(product_id) {
     let products = getLocalStorage();
     for (let i = 0; i < getLocalStorage().length; i++) {
-        let product = products[i]
-        let productId = Object.keys(product)[0]
+        let product = products[i];
+        let productId = Object.keys(product)[0];
         if (productId == product_id) {
-            return true
+            return true;
         }
     }
     return false;
 }
 
-function create (product_id, product_name, product_img, product_price, boolean) {
+function create(product_id, product_name, product_img, product_price, boolean) {
     if (checkProduct(product_id)) {
-        update(product_id, 'add')
+        update(product_id, 'add');
     } else {
         let product = {
-            [product_id] : {
-                name : product_name,
-                image : product_img,
-                price : product_price,
+            [product_id]: {
+                name: product_name,
+                image: product_img,
+                price: product_price,
                 quantity: 1,
-                checkbox : false
+                checkbox: false
             }
-        }
-        let products = getLocalStorage()
-        products.push(product)
-        setLocalStorage(products)
+        };
+        let products = getLocalStorage();
+        products.push(product);
+        setLocalStorage(products);
     }
     if (!boolean) {
-        alert('Thêm vào giỏ hàng thành công !!!')
+        alert('Thêm vào giỏ hàng thành công !!!');
     }
 }
 
-function update (product_id, type) {
-    let products = getLocalStorage()
+function update(product_id, type) {
+    let products = getLocalStorage();
     for (let i = 0; i < products.length; i++) {
-        let product = products[i]
-        let productId = Object.keys(product)[0]
+        let product = products[i];
+        let productId = Object.keys(product)[0];
         if (productId == product_id) {
-            if (type ==  "add") {
-                ++products[i][productId].quantity
+            if (type == "add") {
+                ++products[i][productId].quantity;
             } else {
                 if (products[i][productId].quantity > 1)
-                    --products[i][productId].quantity
-                else (
-                    alert('Giá trị tối thiểu là 1')
-                )
+                    --products[i][productId].quantity;
+                else alert('Giá trị tối thiểu là 1');
             }
-            setLocalStorage(products)
+            setLocalStorage(products);
             break;
         }
     }
 }
 
-function add (produc_id, boolean) {
+function add(produc_id, boolean) {
     fetch(`http://localhost:3000/products/${produc_id}`)
-    .then(response=>response.json())
-    .then(product=>{
-        create(product.id, product.name, product.image, product.price, boolean)
-    })
+        .then(response => response.json())
+        .then(product => {
+            create(product.id, product.name, product.image, product.price, boolean);
+            if (boolean) {
+                // Redirect to payment page after adding to cart
+                window.location.href = '/projectWeb/page/payment/payment.html';
+            }
+        });
 }
 
-function totalQuantity () {
-        let products = getLocalStorage()
-        let total = 0
-        for (let i = 0; i < products.length; i++) {
-            let product = products[i]
-            let productId = Object.keys(product)[0]
-            total += products[i][productId].quantity
-        }
-        return total
+function totalQuantity() {
+    let products = getLocalStorage();
+    let total = 0;
+    for (let i = 0; i < products.length; i++) {
+        let product = products[i];
+        let productId = Object.keys(product)[0];
+        total += products[i][productId].quantity;
+    }
+    return total;
 }
 
-function goToDetail (idDetail) {
-    localStorage.setItem('idDetail', idDetail)
+function goToDetail(idDetail) {
+    localStorage.setItem('idDetail', idDetail);
 }

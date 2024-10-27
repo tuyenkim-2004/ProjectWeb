@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return {
                     productId: productId,
                     name: productData.name,
+                    image: productData.image,
                     price: productData.price,
                     quantity: productData.quantity
                 };

@@ -344,15 +344,16 @@
   ],
   "orders": [
     {
-      "orderID": 1729936303076,
+      "orderID": 1730039460278,
       "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
       "phone": "0348626820",
-      "address": "ass",
-      "note": "dsddsfsdf",
+      "address": "addsd",
+      "note": "sdfsdf",
       "products": [
         {
           "productId": "2",
           "name": "Sữa rửa mặt Hazeline",
+          "image": "/projectWeb/images/img_faceWash/img_2.webp",
           "price": 55000,
           "quantity": 1
         }
@@ -361,194 +362,37 @@
       "shippingFee": 40000,
       "total": 95000,
       "paymentMethod": "Tiền mặt",
-      "orderDate": "2024-10-26T09:51:43.077Z",
-      "id": 18
+      "orderDate": "2024-10-27T14:31:00.278Z",
+      "id": 1
     },
     {
-      "orderID": 1729936810078,
+      "orderID": 1730039765192,
       "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
       "phone": "0348626820",
-      "address": "asd",
-      "note": "ffgfgf",
+      "address": "as",
+      "note": "ádsa",
       "products": [
         {
-          "productId": "2",
-          "name": "Sữa rửa mặt Hazeline",
-          "price": 55000,
+          "productId": "7",
+          "name": "Dầu gội Rejoie",
+          "image": "/projectWeb/images/img_shampoo/shampoo_3.webp",
+          "price": 75000,
           "quantity": 1
-        }
-      ],
-      "subtotal": 55000,
-      "shippingFee": 40000,
-      "total": 95000,
-      "paymentMethod": "Tiền mặt",
-      "orderDate": "2024-10-26T10:00:10.078Z",
-      "id": 19
-    },
-    {
-      "orderID": 1729937182935,
-      "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
-      "phone": "0348626820",
-      "address": "qư",
-      "note": "ẻtttyt",
-      "products": [
-        {
-          "productId": "2",
-          "name": "Sữa rửa mặt Hazeline",
-          "price": 55000,
-          "quantity": 1
-        }
-      ],
-      "subtotal": 55000,
-      "shippingFee": 40000,
-      "total": 95000,
-      "paymentMethod": "Tiền mặt",
-      "orderDate": "2024-10-26T10:06:22.935Z",
-      "id": 20
-    },
-    {
-      "orderID": 1729937392192,
-      "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
-      "phone": "0348626820",
-      "address": "asdasd",
-      "note": "sdasf",
-      "products": [
-        {
-          "productId": "2",
-          "name": "Sữa rửa mặt Hazeline",
-          "price": 55000,
-          "quantity": 1
-        }
-      ],
-      "subtotal": 55000,
-      "shippingFee": 40000,
-      "total": 95000,
-      "paymentMethod": "QR code",
-      "orderDate": "2024-10-26T10:09:52.192Z",
-      "id": 21
-    },
-    {
-      "orderID": 1729937803236,
-      "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
-      "phone": "0348626820",
-      "address": "sdfs",
-      "note": "dfsf",
-      "products": [
+        },
         {
           "productId": "6",
           "name": "Dầu gội NeBlack Tone",
+          "image": "/projectWeb/images/img_shampoo/shapoo_2.webp",
           "price": 150000,
           "quantity": 1
-        },
-        {
-          "productId": "2",
-          "name": "Sữa rửa mặt Hazeline",
-          "price": 55000,
-          "quantity": 1
         }
       ],
-      "subtotal": 205000,
+      "subtotal": 225000,
       "shippingFee": 40000,
-      "total": 245000,
+      "total": 265000,
       "paymentMethod": "Tiền mặt",
-      "orderDate": "2024-10-26T10:16:43.236Z",
-      "id": 22
-    },
-    {
-      "orderID": 1729938081805,
-      "email": "123@gmail.com",
-      "phone": "123",
-      "address": "sadsad",
-      "note": "dsad",
-      "products": [
-        {
-          "productId": "2",
-          "name": "Sữa rửa mặt Hazeline",
-          "price": 55000,
-          "quantity": 1
-        }
-      ],
-      "subtotal": 55000,
-      "shippingFee": 40000,
-      "total": 95000,
-      "paymentMethod": "Tiền mặt",
-      "orderDate": "2024-10-26T10:21:21.805Z",
-      "id": 23
-    },
-    {
-      "id": "2460",
-      "orderID": 1729947580396,
-      "email": "hiep@gmail.com",
-      "phone": "0862392271",
-      "address": "Cát Hanh Phù Cát",
-      "note": "..............",
-      "products": [
-        {
-          "productId": "2",
-          "name": "Sữa rửa mặt Hazeline",
-          "price": 55000,
-          "quantity": 2
-        }
-      ],
-      "subtotal": 110000,
-      "shippingFee": 40000,
-      "total": 150000,
-      "paymentMethod": "QR code",
-      "orderDate": "2024-10-26T12:59:40.396Z"
-    },
-    {
-      "id": "9b73",
-      "orderID": 1729952988377,
-      "email": "hiep@gmail.com",
-      "phone": "0862392271",
-      "address": "Quảng Trị",
-      "note": "hjahsdkjhasjdk",
-      "products": [
-        {
-          "productId": "2",
-          "name": "Sữa rửa mặt Hazeline",
-          "price": 55000,
-          "quantity": 2
-        }
-      ],
-      "subtotal": 110000,
-      "shippingFee": 40000,
-      "total": 150000,
-      "paymentMethod": "Tiền mặt",
-      "orderDate": "2024-10-26T14:29:48.377Z"
-    },
-    {
-      "id": "f45d",
-      "orderID": 1729958782612,
-      "email": "hiep@gmail.com",
-      "phone": "0862392271",
-      "address": "Quảng Trị",
-      "note": "hàng đẹp ",
-      "products": [
-        {
-          "productId": "2",
-          "name": "Sữa rửa mặt Hazeline",
-          "price": 55000,
-          "quantity": 1
-        },
-        {
-          "productId": "11",
-          "name": "Kem dưỡng da Collagen",
-          "price": 230000,
-          "quantity": 1
-        },
-        {
-          "productId": "12",
-          "name": "Kem dưỡng da Laneige",
-          "price": 80000,
-          "quantity": 1
-        }
-      ],
-      "subtotal": 365000,
-      "shippingFee": 40000,
-      "total": 405000,
-      "paymentMethod": "Tiền mặt",
-      "orderDate": "2024-10-26T16:06:22.612Z"
+      "orderDate": "2024-10-27T14:36:05.192Z",
+      "id": 2
     }
   ],
   "carts": [
