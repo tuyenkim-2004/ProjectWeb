@@ -76,7 +76,7 @@ p {
 
  .sub,  .add {
     margin: 0px;
-    font-size: 25px;
+    font-size: 30px;
     width: 70px;
     background: lightgray;
     border: 1px solid lightgray;
@@ -91,7 +91,7 @@ p {
 
 .remove {
     width: 40px;
-    font-size: 15px;   
+    font-size: 20px;   
     border: none;
     background: white;
 }
@@ -103,4 +103,9 @@ p {
     color:  gray;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
 }
