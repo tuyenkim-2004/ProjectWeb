@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/projectWeb/page/payment/payment.css">
+</head>
+<body>
+    <a href="/projectWeb/page/home/home.html">Template noisy beauty</a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div class="title">
+                    <p>Thông tin nhận hàng</p>
+                    <a href="/projectWeb/page/login/login.html"><i class="bi3 bi-person-fill">Đăng nhập</i></a>
+                </div>
+                <label for="email">Nhập email của bạn: </label>
+                <input type="text" placeholder="Enter your email" id="email"> 
+
+                <label for="phone">Nhập số điện thoại của bạn: </label>
+                <input type="text" placeholder="Nhập số điện thoại của bạn" id="phone">
+
+                <label for="address">Nhập địa chỉ của bạn: </label>
+                <input type="text" placeholder="Nhập địa chỉ của bạn" id="address">
+                
+                <div class="form-group">
+                    <label for="note">Ghi chú (tùy chọn)</label>
+                    <textarea id="note" placeholder="Nhập ghi chú ở đây"></textarea>
+                </div>    
+            </div>
+
+            <div class="col-6">
+                <p>Đơn hàng</p>
+                <div class="order-summary">
+                    <!-- Bạn có thể thêm nội dung đơn hàng ở đây -->
+                </div>
+                <div class="fee_shipping">
+                    <p>Tiền vận chuyển: </p>
+                    <p>40000 VND</p>
+                </div>
+                <div class="tam_tinh">
+                    <p>Tạm tính: </p>
+                    <p class="price_tamtinh"></p>
+                </div>
+                <div class="total">
+                    <p>Tổng cộng</p>
+                    <p class="total_price"></p> <!-- Bạn có thể thêm tổng cộng ở đây -->
+                </div>
+                <p>Thanh toán</p>
+                <div class="method-payment">
+                    <div class="method_tien_mat">
+                        <input type="radio" id="tien_mat" name="method" value="Tiền mặt" checked>
+                        <label for="tien_mat">Thanh toán tiền khi nhận hàng</label>
+                    </div>
+                    <div class="method_QR_code">
+                        <div class="payment_qr">
+                            <input type="radio" id="qr_code" name="method" value="QR code">
+                            <label for="qr_code">Mã QR</label>
+                        </div>
+                        <div class="qr-code">
+                            <img id="qr_img" src="https://qrcode-gen.com/images/qrcode-default.png" alt="" style="display: none;"> <!-- Ẩn mặc định -->
+                        </div>
+                    </div>                    
+                    <div class="button">
+                        <button class="order">THANH TOÁN</button>
+                        <button class="shopping" id="back-to-cart">QUAY VỀ GIỎ HÀNG</button>
+                    </div>
+                </div> 
+           </div>
+        </div>
+    </div>
+    <script src="/projectWeb/page/shoppingCart/shoppingCart.html"></script>
+    <script src="/projectWeb/services/payment.js"></script>
+    <script>
+        document.getElementById('back-to-cart').addEventListener('click', function() {
+        window.location.href = "/projectWeb/page/shoppingCart/shoppingCart.html"; // Đường dẫn đến trang giỏ hàng
+    });
+    </script>
+</body>
+</html>

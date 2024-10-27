@@ -1,0 +1,416 @@
+{
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin"
+    },
+    {
+      "id": "2",
+      "name": "Customer"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "tuyen",
+      "password": "tuyen123",
+      "phone": "0348626820",
+      "roleId": 1,
+      "email": "tuyenkimnguyen107@gmail.com"
+    },
+    {
+      "id": "1728914099294",
+      "username": "123",
+      "password": "123",
+      "phone": "123",
+      "roleId": 2,
+      "email": "123@gmail.com"
+    },
+    {
+      "id": "1728918481966",
+      "username": "nguyendat",
+      "password": "12345678",
+      "phone": "030805000",
+      "roleId": 2,
+      "email": "dat@123.com"
+    },
+    {
+      "id": "1729067753798",
+      "username": "Nguyễn Thị Kim Tuyền",
+      "password": "123456789",
+      "phone": "0348626820",
+      "roleId": 2,
+      "email": "tuyen.nguyen25@student.passerellesnumeriques.org"
+    },
+    {
+      "id": 1729775047649,
+      "username": "hiep",
+      "password": "123",
+      "phone": "0862392271",
+      "roleId": 2,
+      "email": "hiep@gmail.com"
+    }
+  ],
+  "products": [
+    {
+      "name": "Sữa rửa mặt Hazeline",
+      "price": 55000,
+      "stock": 30,
+      "image": "/projectWeb/images/img_faceWash/img_2.webp",
+      "id": "2",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da."
+    },
+    {
+      "id": "3",
+      "name": "Sữa rửa mặt Hatomuzi",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 95000,
+      "categoryId": 1,
+      "image": "/projectWeb/images/img_faceWash/img_3.webp",
+      "stock": 20
+    },
+    {
+      "id": "4",
+      "name": "Sữa rửa mặt Rice milk",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 75000,
+      "categoryId": 1,
+      "image": "/projectWeb/images/img_faceWash/img_4.webp",
+      "stock": 20
+    },
+    {
+      "id": "5",
+      "name": "Dầu gội Clear",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 200000,
+      "categoryId": 2,
+      "image": "/projectWeb/images/img_shampoo/shampoo_1.webp",
+      "stock": 20
+    },
+    {
+      "id": "6",
+      "name": "Dầu gội NeBlack Tone",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 150000,
+      "categoryId": 2,
+      "image": "/projectWeb/images/img_shampoo/shapoo_2.webp",
+      "stock": 20
+    },
+    {
+      "id": "7",
+      "name": "Dầu gội Rejoie",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 75000,
+      "categoryId": 2,
+      "image": "/projectWeb/images/img_shampoo/shampoo_3.webp",
+      "stock": 20
+    },
+    {
+      "id": "8",
+      "name": "Dầu gội Dercos",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 75000,
+      "categoryId": 2,
+      "image": "/projectWeb/images/img_shampoo/shampoo_4.webp",
+      "stock": 20
+    },
+    {
+      "id": "9",
+      "name": "Kem dưỡng da V7Tone",
+      "description": "Giúp cung cấp độ ẩm và làm sáng da.",
+      "price": 80000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_1.webp",
+      "stock": 20
+    },
+    {
+      "id": "10",
+      "name": "Kem dưỡng da bioaqua",
+      "description": "Giúp cung cấp độ ẩm và làm mờ nếp nhăn.",
+      "price": 99000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_2.webp",
+      "stock": 20
+    },
+    {
+      "id": "11",
+      "name": "Kem dưỡng da Collagen",
+      "description": "Giúp làm căng da và phục hồi độ đàn hồi.",
+      "price": 230000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_3.webp",
+      "stock": 20
+    },
+    {
+      "id": "12",
+      "name": "Kem dưỡng da Laneige",
+      "description": "Giúp cung cấp độ ẩm sâu cho da.",
+      "price": 80000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_4.webp",
+      "stock": 20
+    },
+    {
+      "id": "13",
+      "name": "Kem dưỡng da Nivea",
+      "description": "Giúp làm mềm và dưỡng ẩm cho da.",
+      "price": 300000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_5.webp",
+      "stock": 20
+    },
+    {
+      "id": "14",
+      "name": "Kem dưỡng da L'Paris",
+      "description": "Giúp làm sáng và cải thiện kết cấu da.",
+      "price": 150000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_6.webp",
+      "stock": 20
+    },
+    {
+      "id": "15",
+      "name": "Kem dưỡng da Redwin",
+      "description": "Giúp làm dịu và phục hồi da.",
+      "price": 230000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img7.webp",
+      "stock": 20
+    },
+    {
+      "id": "16",
+      "name": "Kem dưỡng da Aura",
+      "description": "Giúp làm trắng và cấp ẩm cho da.",
+      "price": 230000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_8.webp",
+      "stock": 20
+    },
+    {
+      "id": "17",
+      "name": "Kem dưỡng da Simple",
+      "description": "Giúp làm sạch và dịu nhẹ cho da nhạy cảm.",
+      "price": 70000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_9.webp",
+      "stock": 20
+    },
+    {
+      "id": "18",
+      "name": "Kem dưỡng da Deleventh",
+      "description": "Giúp cải thiện độ đàn hồi và làm sáng da.",
+      "price": 200000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_10.webp",
+      "stock": 20
+    },
+    {
+      "id": "19",
+      "name": "Sữa tắm Dove",
+      "description": "Giúp làm sạch và dưỡng ẩm cho da.",
+      "price": 150000,
+      "categoryId": 4,
+      "image": "/projectWeb/images/img_cleanser/img_1.webp",
+      "stock": 20
+    },
+    {
+      "id": "20",
+      "name": "Sữa tắm Purité",
+      "description": "Giúp làm sạch và giữ ẩm cho da.",
+      "price": 200000,
+      "categoryId": 4,
+      "image": "/projectWeb/images/img_cleanser/img_2.webp",
+      "stock": 20
+    },
+    {
+      "id": "21",
+      "name": "Sữa tắm Pharmacity",
+      "description": "Giúp làm sạch da và giữ ẩm.",
+      "price": 150000,
+      "categoryId": 4,
+      "image": "/projectWeb/images/img_cleanser/img_3.webp",
+      "stock": 20
+    },
+    {
+      "id": "22",
+      "name": "Sữa tắm ST.Ives",
+      "description": "Giúp làm sạch và làm mềm da.",
+      "price": 110000,
+      "categoryId": 4,
+      "image": "/projectWeb/images/img_cleanser/img_4.webp",
+      "stock": 20
+    },
+    {
+      "id": "23",
+      "name": "Sữa tắm LOVEBEAUTY",
+      "description": "Giúp làm sạch và cung cấp độ ẩm.",
+      "price": 150000,
+      "categoryId": 4,
+      "image": "/projectWeb/images/img_cleanser/img_5.webp",
+      "stock": 20
+    }
+  ],
+  "new_arrivals": [
+    {
+      "id": "1",
+      "name": "Sữa rửa mặt Senka",
+      "price": 80000,
+      "categoryId": 1,
+      "image": "/projectWeb/images/img_faceWash/img_1.webp",
+      "stock": 50
+    },
+    {
+      "id": "2",
+      "name": "Sữa rửa mặt Hazeline",
+      "price": 55000,
+      "categoryId": 1,
+      "image": "/projectWeb/images/img_faceWash/img_2.webp",
+      "stock": 30
+    },
+    {
+      "id": "6",
+      "name": "Dầu gội NeBlack Tone",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 150000,
+      "categoryId": 1,
+      "image": "/projectWeb/images/img_shampoo/shapoo_2.webp",
+      "stock": 20
+    },
+    {
+      "id": "7",
+      "name": "Dầu gội Rejoie",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 75000,
+      "categoryId": 1,
+      "image": "/projectWeb/images/img_shampoo/shampoo_3.webp",
+      "stock": 20
+    }
+  ],
+  "best_sellers": [
+    {
+      "id": "3",
+      "name": "Sữa rửa mặt Hatomuzi",
+      "description": "Giúp làm sạch và cân bằng độ pH cho da.",
+      "price": 95000,
+      "categoryId": 1,
+      "image": "/projectWeb/images/img_faceWash/img_3.webp",
+      "stock": 20
+    },
+    {
+      "id": "11",
+      "name": "Kem dưỡng da Collagen",
+      "description": "Giúp làm căng da và phục hồi độ đàn hồi.",
+      "price": 230000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_3.webp",
+      "stock": 20
+    },
+    {
+      "id": "12",
+      "name": "Kem dưỡng da Laneige",
+      "description": "Giúp cung cấp độ ẩm sâu cho da.",
+      "price": 80000,
+      "categoryId": 3,
+      "image": "/projectWeb/images/img_skinCareScream/img_4.webp",
+      "stock": 20
+    },
+    {
+      "id": "22",
+      "name": "Sữa tắm ST.Ives",
+      "description": "Giúp làm sạch và làm mềm da.",
+      "price": 110000,
+      "categoryId": 4,
+      "image": "/projectWeb/images/img_cleanser/img_4.webp",
+      "stock": 20
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Sữa rửa mặt"
+    },
+    {
+      "id": "2",
+      "name": "Dầu gội "
+    },
+    {
+      "id": "3",
+      "name": "Kem dưỡng da"
+    },
+    {
+      "id": "4",
+      "name": "Sữa tắm"
+    }
+  ],
+  "orders": [
+    {
+      "orderID": 1730039460278,
+      "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
+      "phone": "0348626820",
+      "address": "addsd",
+      "note": "sdfsdf",
+      "products": [
+        {
+          "productId": "2",
+          "name": "Sữa rửa mặt Hazeline",
+          "image": "/projectWeb/images/img_faceWash/img_2.webp",
+          "price": 55000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 55000,
+      "shippingFee": 40000,
+      "total": 95000,
+      "paymentMethod": "Tiền mặt",
+      "orderDate": "2024-10-27T14:31:00.278Z",
+      "id": 1
+    },
+    {
+      "orderID": 1730039765192,
+      "email": "tuyen.nguyen25@student.passerellesnumeriques.org",
+      "phone": "0348626820",
+      "address": "as",
+      "note": "ádsa",
+      "products": [
+        {
+          "productId": "7",
+          "name": "Dầu gội Rejoie",
+          "image": "/projectWeb/images/img_shampoo/shampoo_3.webp",
+          "price": 75000,
+          "quantity": 1
+        },
+        {
+          "productId": "6",
+          "name": "Dầu gội NeBlack Tone",
+          "image": "/projectWeb/images/img_shampoo/shapoo_2.webp",
+          "price": 150000,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 225000,
+      "shippingFee": 40000,
+      "total": 265000,
+      "paymentMethod": "Tiền mặt",
+      "orderDate": "2024-10-27T14:36:05.192Z",
+      "id": 2
+    }
+  ],
+  "carts": [
+    {
+      "quantity": 1,
+      "id": "1"
+    },
+    {
+      "quantity": 1,
+      "id": "2"
+    },
+    {
+      "quantity": 1,
+      "id": "3"
+    },
+    {
+      "quantity": 1,
+      "id": "4"
+    }
+  ]
+}

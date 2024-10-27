@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài liệu</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="adm.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-    <div class="container-fluid">
-        <div class="container-fluid">
+    <div class="main-admin">
+        <div class="fluid">
             <div class="title_prd">
                 <h2>Quản Lý Sản Phẩm</h2>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="/projectWeb/images/img_panner/logo.webp" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Chuyển đổi điều hướng">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#"><img src="/images/img_panner/logo.webp" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Chuyển đổi điều hướng">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div class="navbar-nav ">
                         <a class="nav-link active" aria-current="page" href="#">Quản lý Sản phẩm</a>
-                        <a class="nav-link active" aria-current="page" href="/projectWeb/admin/managerShopping/shoppingCart.html">Quản Lý Giỏ Hàng</a>
-                        <a class="nav-link active" href="/projectWeb/admin/managerCustomer/ctm.html">Quản lý Khách hàng</a>
+                        <a class="nav-link active" href="/projectWeb/admin/managerCustomer/ctm.html">Quản lý Khách
+                            hàng</a>
                     </div>
                 </div>
             </div>
         </nav>
+        <div id="dashboard" class="my-4">
+            <canvas id="salesChart" width="100%" height="40%"></canvas>
+        </div>
+        <div class="search">
+            <div class="searchProduct">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </div>
+        </div>
         <div class="control">
             <div class="show">
                 <button onclick="show()" class="showfeature">Hiển thị Sản phẩm</button>
@@ -37,17 +53,18 @@
             </div>
             <div class="create">
                 <div class="creat_product">
-                    <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Tạo Sản phẩm
                     </button>
                 </div>
-                
-                
-                <!-- Modal -->
-                <div class="modal show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+
+
+                <!----------------------------------------------------------------- Modal ------------------------------------------------------------>
+                <div class="modal show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-modal="true" role="dialog">
                     <div class="modal-dialog "> <!-- Thêm modal-dialog-centered để căn giữa theo chiều dọc -->
                         <div class="modal-content">
-                            <h2>Tạo Sản phẩm</h2>
+                            <h2>Sản Phẩm</h2>
                             <div class="modal-body">
                                 <div class="container">
                                     <div class="form-box">
@@ -75,10 +92,48 @@
                                                 <input type="text" id="tlq" placeholder="Tổng sản phẩm">
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-primary" onclick="save()">Lưu thay đổi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------------------------------------------------------Modal sửa sản phẩm--------------------------------------------------------------------->
+                <div class="modal show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-modal="true" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <h2>Sửa sản phẩm</h2>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="form-box">
+                                        <input type="hidden" id="productId"> <!-- Trường ẩn để lưu ID sản phẩm -->
                                         <div class="mb-3">
                                             <div class="input-group">
-                                                <div class="input-group-text">Mô tả</div>
-                                                <input type="text" id="mt" placeholder="Mô tả">
+                                                <div class="input-group-text">Tên sản phẩm</div>
+                                                <input type="text" id="prn" placeholder="Tên sản phẩm">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Giá</div>
+                                                <input type="text" id="pre" placeholder="Giá">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Hình ảnh</div>
+                                                <input type="file" id="img" placeholder="Hình ảnh">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="input-group">
+                                                <div class="input-group-text">Tổng sản phẩm</div>
+                                                <input type="text" id="tlq" placeholder="Tổng sản phẩm">
                                             </div>
                                         </div>
                                     </div>
@@ -91,6 +146,7 @@
                         </div>
                     </div>
                 </div>
+                <!--------------------------------------------------------------------------------------------------------------------------------------->
             </div>
         </div>
         <div class="tbl">
@@ -102,7 +158,6 @@
                         <th>Giá</th>
                         <th>Tổng Số lượng</th>
                         <th>Hình ảnh</th>
-                        <th>Mô Tả</th>
                         <th>Chức năng</th>
                     </tr>
                 </thead>
@@ -111,12 +166,10 @@
             </table>
         </div>
     </div>
-    
-    
-    
-    
-    
     <script src="adm.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

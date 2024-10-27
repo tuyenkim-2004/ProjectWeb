@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/projectWeb/page/register/register.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Đăng Ký</h1>
+        <form id="formRegister">
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <p id="emailError"></p>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="password">Mật Khẩu:</label>
+            <div class="input-container">
+                <input type="password" id="password" name="password" required>
+                <i class="eye-icon fas fa-eye" onclick="togglePassword('password')"></i>
+            </div>
+
+            <label for="confirm-password">Xác Nhận Mật Khẩu:</label>
+            <div class="input-container">
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <i class="eye-icon fas fa-eye" onclick="togglePassword('confirm-password')"></i>
+                <p id="errorPassword"></p>
+            </div>
+            <input type="submit" value="Đăng Nhập">
+
+           
+        </form>
+        <div class="footer">
+            <p>Đã có tài khoản? <a href="/projectWeb/page/login/login.html">Đăng Ký </a></p>
+        </div>
+    </div>
+    <script>
+        function togglePassword(id) {
+            const passwordField = document.getElementById(id);
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+        }
+    </script>
+    <script src="/projectWeb/services/register.js"></script>
+</body>
+
+</html>
